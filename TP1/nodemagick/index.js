@@ -1,6 +1,3 @@
-import {Canvas} from "canvas";
+import {filters} from './filters/filters.js'
 
-const canvas = new Canvas(200, 200)
-const ctx = canvas.getContext('2d');
-
-
+export default filters;
