@@ -1,6 +1,6 @@
 import {createCanvas, loadImage} from 'canvas';
 import {fileURLToPath} from 'url';
-import filters from './index.js';
+import filters from '../index.js';
 import path from 'path';
 import fs from 'fs';
 
@@ -22,12 +22,13 @@ const filtrer = async (imagePath, filterName) => {
 
         const outputPath = path.join(__dirname, `${filterName}_filtered_image.jpg`);
         canvas.createJPEGStream().pipe(fs.createWriteStream(outputPath));
+        console.log(`Image with ${filterName} filter saved as ${outputPath}`);
     } catch (error) {
         console.error(`Erreur d'application du filtre : ${filterName} :`, error);
     }
 };
 
 // Usage
-const imagePath = path.join(__dirname, '/pic_trulli.jpg');
+const imagePath = path.join(__dirname, '../pic_trulli.jpg');
 filtrer(imagePath, 'grayscale');
 filtrer(imagePath, 'invert');
