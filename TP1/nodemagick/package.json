@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@iut2-info-stud/burdeaut-nodemagik": "^1.0.0",
     "canvas": "^2.11.2"
   }
 }
