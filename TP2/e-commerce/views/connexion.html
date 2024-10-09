@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Démo SF" />
+    <meta name="author" content="UGA/IUT2/INFO/Philippe Martin" />
+    <title>Accueil</title>
+    <!-- CSS : Bootstrap, Fontawsome, projet (styles communs à tout le projet) -->
+    <link href="/assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="/assets/vendors/fontawesome/fontawesome-5.all.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/css/projet.css" rel="stylesheet" />
+    <!-- debut du block css -->
+    <!-- fin du block css -->
+  </head>
+  <body>
+    <!-- debut de la navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/"> <i class="fas fa-home"></i> Démo SF </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/boutique">
+              <i class="fas fa-store"></i> Boutique
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/panier">
+              <i class="fas fa-shopping-cart"></i> 0 Produit(s)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">
+              <i class="fas fa-comments"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <span
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user"></i> Connexion
+            </span>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/login"> Connexion/Inscription </a>
+              <a class="dropdown-item disabled" href="/usager/compte">
+                Mon Compte
+              </a>
+              <a class="dropdown-item disabled" href="/usager/commandes">
+                Mes Commandes
+              </a>
+              <a class="dropdown-item disabled" href="/logout"> Déconnexion </a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            id="searchString"
+            type="text"
+            placeholder="Chercher Produits..."
+            aria-label="Search"
+          />
+          <button class="btn btn-secondary my-2 my-sm-0" id="searchButton">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <ul class="navbar-nav my-0">
+          <li class="nav-item dropdown">
+            <span
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              EUR
+            </span>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="dropdown02"
+              style="min-width: 5rem"
+            >
+              <a class="dropdown-item" href="/changer_monnaie/CAD"> CAD </a>
+              <a class="dropdown-item" href="/changer_monnaie/USD"> USD </a>
+              <a class="dropdown-item" href="/changer_monnaie/GBP"> GBP </a>
+              <a class="dropdown-item" href="/changer_monnaie/PHP"> PHP </a>
+              <a class="dropdown-item" href="/changer_monnaie/IDR"> IDR </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- fin de la navbar -->
+    <main role="main" class="container-fluid">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="main-div">
+            <!-- debut du block body -->
+            <div class="row small">
+              <div class="card col-md-4 offset-1">
+                <div class="card-header">
+                  <h3>
+                    <i class="fas fa-user-check"></i> Already Member : Sign In
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <form method="post" action="/login">
+                    <div class="form-group">
+                      <label for="inputEmail">Email</label>
+                      <input
+                        type="email"
+                        value=""
+                        name="email"
+                        id="inputEmail"
+                        class="form-control"
+                        required
+                        autofocus
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword">Password</label>
+                      <input
+                        type="password"
+                        name="password"
+                        id="inputPassword"
+                        class="form-control"
+                        required
+                      />
+                      <input
+                        type="hidden"
+                        name="_csrf_token"
+                        value="QhTgX4Z57-icfoqqCxf_UJPfweJl0_oewaLsYseFuY8"
+                      />
+                    </div>
+                    <div class="col-md-12 btn-group" style="padding: 0px">
+                      <button class="btn btn-primary" type="submit">
+                        Sign In
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="card col-md-5">
+                <div class="card-header">
+                  <h3>
+                    <i class="fas fa-user-plus"></i> New Member : Register
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <form
+                    name="usager"
+                    method="post"
+                    action="/inscription"
+                  >
+                    <div id="usager">
+                      <div class="form-group">
+                        <label for="usager_email" class="required">Email</label
+                        ><input
+                          type="email"
+                          id="usager_email"
+                          name="usager[email]"
+                          required="required"
+                          maxlength="180"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="usager_password" class="required"
+                          >Password</label
+                        ><input
+                          type="password"
+                          id="usager_password"
+                          name="usager[password]"
+                          required="required"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="usager_nom" class="required"
+                          >Last Name</label
+                        ><input
+                          type="text"
+                          id="usager_nom"
+                          name="usager[nom]"
+                          required="required"
+                          maxlength="255"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="usager_prenom" class="required"
+                          >First Name</label
+                        ><input
+                          type="text"
+                          id="usager_prenom"
+                          name="usager[prenom]"
+                          required="required"
+                          maxlength="255"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12 btn-group" style="padding: 0px">
+                      <button class="btn btn-primary">Register</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+            <!-- fin du block body -->
+          </div>
+        </div>
+        <div class="col-md-2" style="padding: 10px">
+          <div class="card">
+            <div class="card-header text-center">
+              <h4>
+                <i class="fas fa-star"></i> Top Ventes
+                <i class="fas fa-star"></i>
+              </h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                {{#top_ventes}}
+                <a href="{{ url }}">
+                  <li class="list-group-item text-center clickable">
+                    <img src="{{ image }}" style="height: 40px" />
+                    <p>
+                      {{ nom }}<br /><i>{{ nombre }} Ventes</i>
+                    </p>
+                  </li>
+                </a>
+                {{/top_ventes}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- JS : JQuery, Bootstrap -->
+    <script src="/assets/vendors/jquery/jquery.slim.min.js"></script>
+    <script src="/assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      $(function () {
+        // Activation tooltip bootstrap sur la page
+        $('[data-toggle="tooltip"]').tooltip();
+        // Comportement du bouton de recherche
+        $('#searchButton').click(function () {
+          var searchString = $('#searchString').val().trim();
+          location = '/boutique/chercher/' + searchString;
+          return false;
+        });
+      });
+    </script>
+    <!-- debut du block js -->
+    <!-- fin du block js -->
+  </body>
+</html>
+
