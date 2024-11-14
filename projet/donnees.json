@@ -1,0 +1,1939 @@
+{
+  "producers": [
+    {
+      "id": "prod_1",
+      "name": "Rick Rubin",
+      "tracks": [
+        "track_1",
+        "track_8",
+        "track_15",
+        "track_22",
+        "track_30",
+        "track_35",
+        "track_40",
+        "track_45",
+        "track_50"
+      ]
+    },
+    {
+      "id": "prod_2",
+      "name": "Max Martin",
+      "tracks": [
+        "track_2",
+        "track_9",
+        "track_16",
+        "track_23",
+        "track_31",
+        "track_36",
+        "track_41",
+        "track_46"
+      ]
+    },
+    {
+      "id": "prod_3",
+      "name": "Pharrell Williams",
+      "tracks": [
+        "track_3",
+        "track_10",
+        "track_17",
+        "track_24",
+        "track_32",
+        "track_37",
+        "track_42",
+        "track_47"
+      ]
+    },
+    {
+      "id": "prod_4",
+      "name": "Jack Antonoff",
+      "tracks": [
+        "track_4",
+        "track_11",
+        "track_18",
+        "track_25",
+        "track_33",
+        "track_38",
+        "track_43",
+        "track_48"
+      ]
+    },
+    {
+      "id": "prod_5",
+      "name": "Mark Ronson",
+      "tracks": [
+        "track_5",
+        "track_12",
+        "track_19",
+        "track_26",
+        "track_34",
+        "track_39",
+        "track_44",
+        "track_49"
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "id": "art_1",
+      "name": "Taylor Swift",
+      "spotifyId": "spotify_001",
+      "country": "US",
+      "type": "solo"
+    },
+    {
+      "id": "art_2",
+      "name": "Ed Sheeran",
+      "spotifyId": "spotify_002",
+      "country": "UK",
+      "type": "solo"
+    },
+    {
+      "id": "art_3",
+      "name": "The Weeknd",
+      "spotifyId": "spotify_003",
+      "country": "CA",
+      "type": "solo"
+    },
+    {
+      "id": "art_4",
+      "name": "Imagine Dragons",
+      "spotifyId": "spotify_004",
+      "country": "US",
+      "type": "band"
+    },
+    {
+      "id": "art_5",
+      "name": "Dua Lipa",
+      "spotifyId": "spotify_005",
+      "country": "UK",
+      "type": "solo"
+    },
+    {
+      "id": "art_6",
+      "name": "Arctic Monkeys",
+      "spotifyId": "spotify_006",
+      "country": "UK",
+      "type": "band"
+    },
+    {
+      "id": "art_7",
+      "name": "Billie Eilish",
+      "spotifyId": "spotify_007",
+      "country": "US",
+      "type": "solo"
+    },
+    {
+      "id": "art_8",
+      "name": "Post Malone",
+      "spotifyId": "spotify_008",
+      "country": "US",
+      "type": "solo"
+    },
+    {
+      "id": "art_9",
+      "name": "Coldplay",
+      "spotifyId": "spotify_009",
+      "country": "UK",
+      "type": "band"
+    },
+    {
+      "id": "art_10",
+      "name": "Drake",
+      "spotifyId": "spotify_010",
+      "country": "CA",
+      "type": "solo"
+    }
+  ],
+  "albums": [
+    {
+      "id": "alb_1",
+      "title": "Midnights",
+      "releaseDate": "2022-10-21",
+      "totalTracks": 13,
+      "label": "Republic Records",
+      "distribution": "Universal",
+      "artistId": "art_1"
+    },
+    {
+      "id": "alb_2",
+      "title": "÷ (Divide)",
+      "releaseDate": "2017-03-03",
+      "totalTracks": 12,
+      "label": "Atlantic",
+      "distribution": "Warner",
+      "artistId": "art_2"
+    },
+    {
+      "id": "alb_3",
+      "title": "Dawn FM",
+      "releaseDate": "2022-01-07",
+      "totalTracks": 16,
+      "label": "XO",
+      "distribution": "Universal",
+      "artistId": "art_3"
+    },
+    {
+      "id": "alb_4",
+      "title": "Mercury",
+      "releaseDate": "2021-09-03",
+      "totalTracks": 13,
+      "label": "Interscope",
+      "distribution": "Universal",
+      "artistId": "art_4"
+    },
+    {
+      "id": "alb_5",
+      "title": "Future Nostalgia",
+      "releaseDate": "2020-03-27",
+      "totalTracks": 11,
+      "label": "Warner Records",
+      "distribution": "Warner",
+      "artistId": "art_5"
+    },
+    {
+      "id": "alb_6",
+      "title": "AM",
+      "releaseDate": "2013-09-09",
+      "totalTracks": 12,
+      "label": "Domino",
+      "distribution": "Independent",
+      "artistId": "art_6"
+    },
+    {
+      "id": "alb_7",
+      "title": "Happier Than Ever",
+      "releaseDate": "2021-07-30",
+      "totalTracks": 16,
+      "label": "Darkroom",
+      "distribution": "Universal",
+      "artistId": "art_7"
+    },
+    {
+      "id": "alb_8",
+      "title": "Twelve Carat Toothache",
+      "releaseDate": "2022-06-03",
+      "totalTracks": 14,
+      "label": "Republic Records",
+      "distribution": "Universal",
+      "artistId": "art_8"
+    },
+    {
+      "id": "alb_9",
+      "title": "Music of the Spheres",
+      "releaseDate": "2021-10-15",
+      "totalTracks": 12,
+      "label": "Parlophone",
+      "distribution": "Warner",
+      "artistId": "art_9"
+    },
+    {
+      "id": "alb_10",
+      "title": "Honestly, Nevermind",
+      "releaseDate": "2022-06-17",
+      "totalTracks": 14,
+      "label": "OVO",
+      "distribution": "Universal",
+      "artistId": "art_10"
+    },
+    {
+      "id": "alb_11",
+      "title": "Red (Taylor's Version)",
+      "releaseDate": "2021-11-12",
+      "totalTracks": 30,
+      "label": "Republic Records",
+      "distribution": "Universal",
+      "artistId": "art_1"
+    },
+    {
+      "id": "alb_12",
+      "title": "After Hours",
+      "releaseDate": "2020-03-20",
+      "totalTracks": 14,
+      "label": "XO",
+      "distribution": "Universal",
+      "artistId": "art_3"
+    },
+    {
+      "id": "alb_13",
+      "title": "Evermore",
+      "releaseDate": "2020-12-11",
+      "totalTracks": 15,
+      "label": "Republic Records",
+      "distribution": "Universal",
+      "artistId": "art_1"
+    },
+    {
+      "id": "alb_14",
+      "title": "Hollywood's Bleeding",
+      "releaseDate": "2019-09-06",
+      "totalTracks": 17,
+      "label": "Republic Records",
+      "distribution": "Universal",
+      "artistId": "art_8"
+    },
+    {
+      "id": "alb_15",
+      "title": "Certified Lover Boy",
+      "releaseDate": "2021-09-03",
+      "totalTracks": 21,
+      "label": "OVO",
+      "distribution": "Universal",
+      "artistId": "art_10"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "track_1",
+      "title": "Anti-Hero",
+      "isrc": "USUG12201318",
+      "duration": "3:21",
+      "bpm": 168,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1200000000,
+        "likes": 2500000,
+        "shares": 450000,
+        "downloads": 800000,
+        "peakPosition": 1,
+        "weeklyTrend": "+5%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "high",
+        "mood": "melancholic",
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_2",
+      "title": "Lavender Haze",
+      "isrc": "USUG12201319",
+      "duration": "3:22",
+      "bpm": 172,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 800000000,
+        "likes": 1800000,
+        "shares": 320000,
+        "downloads": 600000,
+        "peakPosition": 2,
+        "weeklyTrend": "+3%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "medium",
+        "mood": "dreamy",
+        "instruments": [
+          "synth",
+          "drums",
+          "guitar"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_3",
+      "title": "Shape of You",
+      "isrc": "GBAHS1600463",
+      "duration": "3:54",
+      "bpm": 96,
+      "language": "en",
+      "releaseYear": 2017,
+      "albumId": "alb_2",
+      "mainArtistId": "art_2",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 3200000000,
+        "likes": 5200000,
+        "shares": 890000,
+        "downloads": 1200000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "C#m",
+        "energyLevel": "high",
+        "mood": "upbeat",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_4",
+      "title": "Blinding Lights",
+      "isrc": "USUG11904206",
+      "duration": "3:20",
+      "bpm": 171,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_12",
+      "mainArtistId": "art_3",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 3500000000,
+        "likes": 4800000,
+        "shares": 920000,
+        "downloads": 1500000,
+        "peakPosition": 1,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_5",
+      "title": "Levitating",
+      "isrc": "GBAHT2000941",
+      "duration": "3:23",
+      "bpm": 103,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_5",
+      "mainArtistId": "art_5",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_8"
+      ],
+      "stats": {
+        "streams": 2800000000,
+        "likes": 3900000,
+        "shares": 780000,
+        "downloads": 950000,
+        "peakPosition": 2,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Bm",
+        "energyLevel": "high",
+        "mood": "danceable",
+        "instruments": [
+          "bass",
+          "synth",
+          "drums"
+        ],
+        "style": "disco-pop"
+      }
+    },
+    {
+      "id": "track_6",
+      "title": "Enemy",
+      "isrc": "USUG12101941",
+      "duration": "2:53",
+      "bpm": 148,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_4",
+      "mainArtistId": "art_4",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_7"
+      ],
+      "stats": {
+        "streams": 1500000000,
+        "likes": 2100000,
+        "shares": 450000,
+        "downloads": 680000,
+        "peakPosition": 3,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "high",
+        "mood": "intense",
+        "instruments": [
+          "guitar",
+          "drums",
+          "synth"
+        ],
+        "style": "rock-pop"
+      }
+    },
+    {
+      "id": "track_7",
+      "title": "Bad Habits",
+      "isrc": "GBAHS2100475",
+      "duration": "3:51",
+      "bpm": 126,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_2",
+      "mainArtistId": "art_2",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1800000000,
+        "likes": 2800000,
+        "shares": 520000,
+        "downloads": 750000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "Fm",
+        "energyLevel": "high",
+        "mood": "dark",
+        "instruments": [
+          "guitar",
+          "synth",
+          "drums"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_8",
+      "title": "Happier Than Ever",
+      "isrc": "USUG12101234",
+      "duration": "5:15",
+      "bpm": 82,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_7",
+      "mainArtistId": "art_7",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 950000000,
+        "likes": 1900000,
+        "shares": 380000,
+        "downloads": 420000,
+        "peakPosition": 11,
+        "weeklyTrend": "-2%"
+      },
+      "musicalInfo": {
+        "key": "Gb",
+        "energyLevel": "dynamic",
+        "mood": "emotional",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "alternative"
+      }
+    },
+    {
+      "id": "track_9",
+      "title": "My Universe",
+      "isrc": "GBAYE2100987",
+      "duration": "3:46",
+      "bpm": 105,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_9",
+      "mainArtistId": "art_9",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_3"
+      ],
+      "stats": {
+        "streams": 1200000000,
+        "likes": 2400000,
+        "shares": 480000,
+        "downloads": 580000,
+        "peakPosition": 1,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "A",
+        "energyLevel": "high",
+        "mood": "uplifting",
+        "instruments": [
+          "synth",
+          "guitar",
+          "drums"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_10",
+      "title": "Sticky",
+      "isrc": "USUG12200123",
+      "duration": "4:03",
+      "bpm": 100,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_10",
+      "mainArtistId": "art_10",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 850000000,
+        "likes": 1600000,
+        "shares": 320000,
+        "downloads": 380000,
+        "peakPosition": 6,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "Cm",
+        "energyLevel": "medium",
+        "mood": "confident",
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_11",
+      "title": "Snow On The Beach",
+      "isrc": "USUG12201320",
+      "duration": "4:16",
+      "bpm": 110,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_7"
+      ],
+      "stats": {
+        "streams": 680000000,
+        "likes": 1400000,
+        "shares": 280000,
+        "downloads": 320000,
+        "peakPosition": 4,
+        "weeklyTrend": "+4%"
+      },
+      "musicalInfo": {
+        "key": "D",
+        "energyLevel": "low",
+        "mood": "dreamy",
+        "instruments": [
+          "piano",
+          "strings",
+          "guitar"
+        ],
+        "style": "indie-pop"
+      }
+    },
+    {
+      "id": "track_12",
+      "title": "Starlight",
+      "isrc": "GBAYE2100988",
+      "duration": "4:18",
+      "bpm": 126,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_9",
+      "mainArtistId": "art_9",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 720000000,
+        "likes": 1600000,
+        "shares": 290000,
+        "downloads": 340000,
+        "peakPosition": 8,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "G",
+        "energyLevel": "high",
+        "mood": "euphoric",
+        "instruments": [
+          "synth",
+          "guitar",
+          "drums"
+        ],
+        "style": "alternative-rock"
+      }
+    },
+    {
+      "id": "track_13",
+      "title": "Die For You",
+      "isrc": "USUG11904207",
+      "duration": "4:20",
+      "bpm": 133,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_12",
+      "mainArtistId": "art_3",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 890000000,
+        "likes": 1900000,
+        "shares": 350000,
+        "downloads": 420000,
+        "peakPosition": 3,
+        "weeklyTrend": "+8%"
+      },
+      "musicalInfo": {
+        "key": "Bm",
+        "energyLevel": "medium",
+        "mood": "emotional",
+        "instruments": [
+          "synth",
+          "drums",
+          "piano"
+        ],
+        "style": "r&b-pop"
+      }
+    },
+    {
+      "id": "track_14",
+      "title": "Circles",
+      "isrc": "USUG11901234",
+      "duration": "3:35",
+      "bpm": 120,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_14",
+      "mainArtistId": "art_8",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1900000000,
+        "likes": 2800000,
+        "shares": 520000,
+        "downloads": 780000,
+        "peakPosition": 1,
+        "weeklyTrend": "-2%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "medium",
+        "mood": "melancholic",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_15",
+      "title": "Way 2 Sexy",
+      "isrc": "USUG12100567",
+      "duration": "4:17",
+      "bpm": 145,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_15",
+      "mainArtistId": "art_10",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_8"
+      ],
+      "stats": {
+        "streams": 950000000,
+        "likes": 1700000,
+        "shares": 380000,
+        "downloads": 450000,
+        "peakPosition": 1,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Fm",
+        "energyLevel": "high",
+        "mood": "confident",
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_16",
+      "title": "Maroon",
+      "isrc": "USUG12201321",
+      "duration": "3:38",
+      "bpm": 168,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 580000000,
+        "likes": 1200000,
+        "shares": 220000,
+        "downloads": 280000,
+        "peakPosition": 3,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "medium",
+        "mood": "intense",
+        "instruments": [
+          "synth",
+          "drums",
+          "guitar"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_17",
+      "title": "R U Mine?",
+      "isrc": "GBCFB1200164",
+      "duration": "3:21",
+      "bpm": 154,
+      "language": "en",
+      "releaseYear": 2013,
+      "albumId": "alb_6",
+      "mainArtistId": "art_6",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 820000000,
+        "likes": 1500000,
+        "shares": 310000,
+        "downloads": 420000,
+        "peakPosition": 7,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "G",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_18",
+      "title": "Therefore I Am",
+      "isrc": "USUG12001345",
+      "duration": "2:54",
+      "bpm": 94,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_7",
+      "mainArtistId": "art_7",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 920000000,
+        "likes": 1800000,
+        "shares": 340000,
+        "downloads": 460000,
+        "peakPosition": 2,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Bbm",
+        "energyLevel": "medium",
+        "mood": "confident",
+        "instruments": [
+          "synth",
+          "bass",
+          "drums"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_19",
+      "title": "One Dance",
+      "isrc": "USUG12001567",
+      "duration": "2:54",
+      "bpm": 104,
+      "language": "en",
+      "releaseYear": 2016,
+      "albumId": "alb_15",
+      "mainArtistId": "art_10",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_5"
+      ],
+      "stats": {
+        "streams": 2500000000,
+        "likes": 3200000,
+        "shares": 680000,
+        "downloads": 920000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "medium",
+        "mood": "danceable",
+        "instruments": [
+          "synth",
+          "drums",
+          "piano"
+        ],
+        "style": "afrobeats"
+      }
+    },
+    {
+      "id": "track_20",
+      "title": "Fix You",
+      "isrc": "GBAYE0500123",
+      "duration": "4:55",
+      "bpm": 138,
+      "language": "en",
+      "releaseYear": 2005,
+      "albumId": "alb_9",
+      "mainArtistId": "art_9",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1800000000,
+        "likes": 2900000,
+        "shares": 580000,
+        "downloads": 850000,
+        "peakPosition": 4,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "Ab",
+        "energyLevel": "building",
+        "mood": "emotional",
+        "instruments": [
+          "piano",
+          "guitar",
+          "drums"
+        ],
+        "style": "alternative-rock"
+      }
+    },
+    {
+      "id": "track_21",
+      "title": "Midnight Rain",
+      "isrc": "USUG12201322",
+      "duration": "2:54",
+      "bpm": 172,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "F#m",
+      "energyLevel": "medium",
+      "mood": "mysterious",
+      "stats": {
+        "streams": 520000000,
+        "likes": 980000,
+        "shares": 180000,
+        "downloads": 250000,
+        "peakPosition": 5,
+        "weeklyTrend": "+4%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "pop",
+        "key": "F#m",
+        "energyLevel": "medium",
+        "mood": "mysterious"
+      }
+    },
+    {
+      "id": "track_22",
+      "title": "Bones",
+      "isrc": "USUG12201789",
+      "duration": "2:45",
+      "bpm": 130,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "Dm",
+      "energyLevel": "high",
+      "mood": "energetic",
+      "stats": {
+        "streams": 890000000,
+        "likes": 1600000,
+        "shares": 320000,
+        "downloads": 420000,
+        "peakPosition": 2,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "guitar",
+          "drums",
+          "synth"
+        ],
+        "style": "rock-pop",
+        "key": "Dm",
+        "energyLevel": "high",
+        "mood": "energetic"
+      }
+    },
+    {
+      "id": "track_23",
+      "title": "Don't Start Now",
+      "isrc": "GBAHT1900412",
+      "duration": "3:03",
+      "bpm": 124,
+      "language": "en",
+      "releaseYear": 2019,
+      "key": "Bm",
+      "energyLevel": "high",
+      "mood": "confident",
+      "stats": {
+        "streams": 1600000000,
+        "likes": 2400000,
+        "shares": 480000,
+        "downloads": 680000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "bass",
+          "synth",
+          "drums"
+        ],
+        "style": "disco-pop",
+        "key": "Bm",
+        "energyLevel": "high",
+        "mood": "confident"
+      }
+    },
+    {
+      "id": "track_24",
+      "title": "Shivers",
+      "isrc": "GBAHS2100476",
+      "duration": "3:27",
+      "bpm": 141,
+      "language": "en",
+      "releaseYear": 2021,
+      "key": "C#m",
+      "energyLevel": "high",
+      "mood": "romantic",
+      "stats": {
+        "streams": 1200000000,
+        "likes": 2100000,
+        "shares": 420000,
+        "downloads": 580000,
+        "peakPosition": 1,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "guitar",
+          "drums",
+          "synth"
+        ],
+        "style": "pop",
+        "key": "C#m",
+        "energyLevel": "high",
+        "mood": "romantic"
+      }
+    },
+    {
+      "id": "track_25",
+      "title": "Everything Goes On",
+      "isrc": "USUG12202001",
+      "duration": "3:55",
+      "bpm": 145,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "G",
+      "energyLevel": "medium",
+      "mood": "hopeful",
+      "stats": {
+        "streams": 450000000,
+        "likes": 980000,
+        "shares": 190000,
+        "downloads": 220000,
+        "peakPosition": 8,
+        "weeklyTrend": "+3%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "piano",
+          "strings",
+          "drums"
+        ],
+        "style": "pop-rock",
+        "key": "G",
+        "energyLevel": "medium",
+        "mood": "hopeful"
+      },
+    {
+      "id": "track_26",
+      "title": "Karma",
+      "isrc": "USUG12201323",
+      "duration": "3:24",
+      "bpm": 146,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "A",
+      "energyLevel": "high",
+      "mood": "playful",
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 480000000,
+        "likes": 890000,
+        "shares": 165000,
+        "downloads": 210000,
+        "peakPosition": 3,
+        "weeklyTrend": "+5%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "guitar",
+          "drums"
+        ],
+        "style": "pop",
+        "key": "A",
+        "energyLevel": "high",
+        "mood": "playful"
+      }
+    },
+    {
+      "id": "track_27",
+      "title": "Save Your Tears",
+      "isrc": "USUG12001346",
+      "duration": "3:35",
+      "bpm": 118,
+      "language": "en",
+      "releaseYear": 2020,
+      "key": "C",
+      "energyLevel": "medium",
+      "mood": "melancholic",
+      "albumId": "alb_12",
+      "mainArtistId": "art_3",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1400000000,
+        "likes": 2200000,
+        "shares": 420000,
+        "downloads": 580000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "pop",
+        "key": "C",
+        "energyLevel": "medium",
+        "mood": "melancholic"
+      }
+    },
+    {
+      "id": "track_28",
+      "title": "Physical",
+      "isrc": "GBAHT2000942",
+      "duration": "3:13",
+      "bpm": 139,
+      "language": "en",
+      "releaseYear": 2020,
+      "key": "Cm",
+      "energyLevel": "high",
+      "mood": "energetic",
+      "albumId": "alb_5",
+      "mainArtistId": "art_5",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 980000000,
+        "likes": 1800000,
+        "shares": 350000,
+        "downloads": 420000,
+        "peakPosition": 2,
+        "weeklyTrend": "-2%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "dance-pop",
+        "key": "Cm",
+        "energyLevel": "high",
+        "mood": "energetic"
+      }
+    },
+    {
+      "id": "track_29",
+      "title": "Do I Wanna Know?",
+      "isrc": "GBCFB1300123",
+      "duration": "4:32",
+      "bpm": 85,
+      "language": "en",
+      "releaseYear": 2013,
+      "key": "Gm",
+      "energyLevel": "medium",
+      "mood": "sultry",
+      "albumId": "alb_6",
+      "mainArtistId": "art_6",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1600000000,
+        "likes": 2500000,
+        "shares": 480000,
+        "downloads": 720000,
+        "peakPosition": 1,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "rock",
+        "key": "Gm",
+        "energyLevel": "medium",
+        "mood": "sultry"
+      }
+    },
+    {
+      "id": "track_30",
+      "title": "Sunflower",
+      "isrc": "USUG11800123",
+      "duration": "2:38",
+      "bpm": 90,
+      "language": "en",
+      "releaseYear": 2018,
+      "key": "D",
+      "energyLevel": "medium",
+      "mood": "chill",
+      "albumId": "alb_14",
+      "mainArtistId": "art_8",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_3"
+      ],
+      "stats": {
+        "streams": 2100000000,
+        "likes": 3100000,
+        "shares": 620000,
+        "downloads": 890000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "guitar",
+          "synth",
+          "drums"
+        ],
+        "style": "pop-rap",
+        "key": "D",
+        "energyLevel": "medium",
+        "mood": "chill"
+      }
+    },
+    {
+      "id": "track_31",
+      "title": "Vigilante Shit",
+      "isrc": "USUG12201324",
+      "duration": "2:44",
+      "bpm": 165,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "Em",
+      "energyLevel": "medium",
+      "mood": "vengeful",
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 420000000,
+        "likes": 780000,
+        "shares": 145000,
+        "downloads": 190000,
+        "peakPosition": 4,
+        "weeklyTrend": "+3%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "bass",
+          "drums"
+        ],
+        "style": "dark-pop",
+        "key": "Em",
+        "energyLevel": "medium",
+        "mood": "vengeful"
+      }
+    },
+    {
+      "id": "track_32",
+      "title": "Sacrifice",
+      "isrc": "USUG12101942",
+      "duration": "3:08",
+      "bpm": 122,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "Dm",
+      "energyLevel": "high",
+      "mood": "dark",
+      "albumId": "alb_12",
+      "mainArtistId": "art_3",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 780000000,
+        "likes": 1400000,
+        "shares": 280000,
+        "downloads": 340000,
+        "peakPosition": 2,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "drums",
+          "bass"
+        ],
+        "style": "r&b-pop",
+        "key": "Dm",
+        "energyLevel": "high",
+        "mood": "dark"
+      }
+    },
+    {
+      "id": "track_33",
+      "title": "Break My Soul",
+      "isrc": "USUG12202002",
+      "duration": "4:38",
+      "bpm": 115,
+      "language": "en",
+      "releaseYear": 2022,
+      "key": "Am",
+      "energyLevel": "high",
+      "mood": "empowering",
+      "albumId": "alb_5",
+      "mainArtistId": "art_5",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 890000000,
+        "likes": 1600000,
+        "shares": 320000,
+        "downloads": 420000,
+        "peakPosition": 1,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "piano",
+          "drums",
+          "synth"
+        ],
+        "style": "house-pop",
+        "key": "Am",
+        "energyLevel": "high",
+        "mood": "empowering"
+      }
+    },
+    {
+      "id": "track_34",
+      "title": "NDA",
+      "isrc": "USUG12001347",
+      "duration": "3:15",
+      "bpm": 171,
+      "language": "en",
+      "releaseYear": 2021,
+      "key": "F#m",
+      "energyLevel": "high",
+      "mood": "mysterious",
+      "albumId": "alb_7",
+      "mainArtistId": "art_7",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 620000000,
+        "likes": 1200000,
+        "shares": 240000,
+        "downloads": 280000,
+        "peakPosition": 3,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "synth",
+          "bass",
+          "drums"
+        ],
+        "style": "electropop",
+        "key": "F#m",
+        "energyLevel": "high",
+        "mood": "mysterious"
+      }
+    },
+    {
+      "id": "track_35",
+      "title": "Rockstar",
+      "isrc": "USUG11800124",
+      "duration": "3:38",
+      "bpm": 160,
+      "language": "en",
+      "releaseYear": 2018,
+      "key": "Cm",
+      "energyLevel": "medium",
+      "mood": "confident",
+      "albumId": "alb_14",
+      "mainArtistId": "art_8",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_10"
+      ],
+      "stats": {
+        "streams": 2300000000,
+        "likes": 3400000,
+        "shares": 680000,
+        "downloads": 920000,
+        "peakPosition": 1,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "trap-rap",
+        "key": "Cm",
+        "energyLevel": "medium",
+        "mood": "confident"
+      }
+    },
+    {
+      "id": "track_36",
+      "title": "Starboy",
+      "isrc": "USUG82738495",
+      "duration": "3:50",
+      "bpm": 186,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_12",
+      "mainArtistId": "art_3",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_9"
+      ],
+      "stats": {
+        "streams": 2100000000,
+        "likes": 3200000,
+        "shares": 580000,
+        "downloads": 890000,
+        "peakPosition": 1,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "Dm",
+        "energyLevel": "high",
+        "mood": "confident",
+        "instruments": [
+          "synth",
+          "drums",
+          "electric guitar"
+        ],
+        "style": "r&b-pop"
+      }
+    },
+    {
+      "id": "track_37",
+      "title": "Paradise City",
+      "isrc": "USUG82738496",
+      "duration": "4:15",
+      "bpm": 142,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_4",
+      "mainArtistId": "art_4",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1800000000,
+        "likes": 2900000,
+        "shares": 420000,
+        "downloads": 750000,
+        "peakPosition": 3,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "electric guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_38",
+      "title": "Ocean Eyes",
+      "isrc": "USUG82738497",
+      "duration": "3:20",
+      "bpm": 120,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_7",
+      "mainArtistId": "art_7",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1500000000,
+        "likes": 2600000,
+        "shares": 380000,
+        "downloads": 620000,
+        "peakPosition": 4,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Bb",
+        "energyLevel": "low",
+        "mood": "melancholic",
+        "instruments": [
+          "piano",
+          "synth",
+          "strings"
+        ],
+        "style": "indie-pop"
+      }
+    },
+    {
+      "id": "track_39",
+      "title": "Circles",
+      "isrc": "USUG82738498",
+      "duration": "3:35",
+      "bpm": 120,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_14",
+      "mainArtistId": "art_8",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1900000000,
+        "likes": 3100000,
+        "shares": 450000,
+        "downloads": 820000,
+        "peakPosition": 1,
+        "weeklyTrend": "+3%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "medium",
+        "mood": "chill",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_40",
+      "title": "Fix You",
+      "isrc": "USUG82738499",
+      "duration": "4:55",
+      "bpm": 138,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_9",
+      "mainArtistId": "art_9",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 2200000000,
+        "likes": 3800000,
+        "shares": 680000,
+        "downloads": 950000,
+        "peakPosition": 2,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "medium",
+        "mood": "emotional",
+        "instruments": [
+          "piano",
+          "guitar",
+          "drums",
+          "strings"
+        ],
+        "style": "alternative-rock"
+      }
+    },
+    {
+      "id": "track_41",
+      "title": "My Universe",
+      "isrc": "GBAYE2100654",
+      "duration": "3:48",
+      "bpm": 105,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_9",
+      "mainArtistId": "art_9",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_4"
+      ],
+      "stats": {
+        "streams": 980000000,
+        "likes": 2100000,
+        "shares": 420000,
+        "downloads": 680000,
+        "peakPosition": 3,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "A",
+        "energyLevel": "high",
+        "mood": "uplifting",
+        "instruments": [
+          "guitar",
+          "synth",
+          "drums",
+          "piano"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_42",
+      "title": "Happier Than Ever",
+      "isrc": "USUG12102547",
+      "duration": "5:15",
+      "bpm": 82,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_7",
+      "mainArtistId": "art_7",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 850000000,
+        "likes": 1900000,
+        "shares": 380000,
+        "downloads": 520000,
+        "peakPosition": 4,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "Gb",
+        "energyLevel": "dynamic",
+        "mood": "emotional",
+        "instruments": [
+          "acoustic_guitar",
+          "electric_guitar",
+          "drums"
+        ],
+        "style": "alternative"
+      }
+    },
+    {
+      "id": "track_43",
+      "title": "Circles",
+      "isrc": "USUG11904589",
+      "duration": "3:35",
+      "bpm": 120,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_14",
+      "mainArtistId": "art_8",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1500000000,
+        "likes": 2800000,
+        "shares": 560000,
+        "downloads": 890000,
+        "peakPosition": 1,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "medium",
+        "mood": "melancholic",
+        "instruments": [
+          "guitar",
+          "bass",
+          "drums",
+          "synth"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_44",
+      "title": "Karma",
+      "isrc": "USUG12201325",
+      "duration": "3:24",
+      "bpm": 145,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 720000000,
+        "likes": 1600000,
+        "shares": 290000,
+        "downloads": 450000,
+        "peakPosition": 5,
+        "weeklyTrend": "+4%"
+      },
+      "musicalInfo": {
+        "key": "C#",
+        "energyLevel": "high",
+        "mood": "confident",
+        "instruments": [
+          "synth",
+          "drums",
+          "bass",
+          "electric_guitar"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_45",
+      "title": "Sticky",
+      "isrc": "USUG12200789",
+      "duration": "4:03",
+      "bpm": 98,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_15",
+      "mainArtistId": "art_10",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 680000000,
+        "likes": 1400000,
+        "shares": 250000,
+        "downloads": 380000,
+        "peakPosition": 6,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "Fm",
+        "energyLevel": "medium",
+        "mood": "confident",
+        "instruments": [
+          "synth",
+          "drums",
+          "808_bass"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_46",
+      "title": "Snow On The Beach",
+      "isrc": "USUG12201326",
+      "duration": "4:16",
+      "bpm": 110,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_7"
+      ],
+      "stats": {
+        "streams": 590000000,
+        "likes": 1300000,
+        "shares": 240000,
+        "downloads": 320000,
+        "peakPosition": 4,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "D",
+        "energyLevel": "low",
+        "mood": "dreamy",
+        "instruments": [
+          "piano",
+          "strings",
+          "acoustic_guitar"
+        ],
+        "style": "indie-pop"
+      }
+    },
+    {
+      "id": "track_47",
+      "title": "Higher Power",
+      "isrc": "GBAYE2100123",
+      "duration": "3:26",
+      "bpm": 125,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_9",
+      "mainArtistId": "art_9",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 520000000,
+        "likes": 980000,
+        "shares": 180000,
+        "downloads": 290000,
+        "peakPosition": 7,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "G",
+        "energyLevel": "high",
+        "mood": "euphoric",
+        "instruments": [
+          "synth",
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "alternative-rock"
+      }
+    },
+    {
+      "id": "track_48",
+      "title": "Therefore I Am",
+      "isrc": "USUG12002458",
+      "duration": "2:54",
+      "bpm": 94,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_7",
+      "mainArtistId": "art_7",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 780000000,
+        "likes": 1700000,
+        "shares": 320000,
+        "downloads": 420000,
+        "peakPosition": 2,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Bbm",
+        "energyLevel": "medium",
+        "mood": "confident",
+        "instruments": [
+          "bass",
+          "synth",
+          "drums"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_49",
+      "title": "Shivers",
+      "isrc": "GBAHS2100725",
+      "duration": "3:27",
+      "bpm": 141,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_2",
+      "mainArtistId": "art_2",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1100000000,
+        "likes": 2200000,
+        "shares": 410000,
+        "downloads": 580000,
+        "peakPosition": 1,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "C#m",
+        "energyLevel": "high",
+        "mood": "romantic",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass",
+          "synth"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_50",
+      "title": "Take My Breath",
+      "isrc": "USUG12100985",
+      "duration": "5:39",
+      "bpm": 118,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_12",
+      "mainArtistId": "art_3",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 890000000,
+        "likes": 1900000,
+        "shares": 350000,
+        "downloads": 480000,
+        "peakPosition": 3,
+        "weeklyTrend": "stable"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "synth",
+          "bass",
+          "drums",
+          "electric_guitar"
+        ],
+        "style": "disco-pop"
+      }
+    }
+  ]
+}
