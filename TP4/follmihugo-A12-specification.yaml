@@ -1,0 +1,184 @@
+openapi: 3.0.2
+info:
+  version: 1.0.0
+  title: API test
+  description: Description de l'API
+  contact:
+    name: Follmi Hugo
+    email: hugo.follmi@etu.univ-grenoble-alpes.fr
+servers:
+  - url: https://localhost:8080/
+paths:
+  /association:
+    get:
+      tags: [association]
+      summary: Donne les informations de l'association
+      responses:
+          "200":
+            description: Liste d'association
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/association'
+          "404":
+            description: Détails de l'association introuvable
+
+  /association/categories:
+    get:
+      tags: [categorie]
+      summary: Liste toutes les catégories de jeux avec leurs jeux
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        "200":
+          description: Liste des catégories et leurs jeux
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/categorie'
+        "404":
+          description: Aucune catégorie trouvée
+
+  /association/categories/{nom}:
+    get:
+      tags: [categorie]
+      summary: Liste tous les jeux d'une catégorie spécifique
+      parameters:
+        - name: nom
+          in: path
+          required: true
+          description: Nom de la catégorie
+          schema:
+            type: string
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        "200":
+          description: Liste des jeux de la catégorie
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categorie'
+        "404":
+          description: Catégorie non trouvée
+
+  /association/jeux:
+    get:
+      tags: [jeux]
+      summary: Liste tout les jeux
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        "200":
+          description: Liste des jeux
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/jeu'
+        "404":
+          description: Aucune catégorie trouvée
+  
+  /association/jeux/{nom}:
+    get:
+      tags: [jeux]
+      summary: Liste tous les jeux d'une catégorie spécifique
+      parameters:
+        - name: nom
+          in: path
+          required: true
+          description: Nom de la catégorie
+          schema:
+            type: string
+        - $ref: '#/components/parameters/limitParam'
+      responses:
+        "200":
+          description: Liste des jeux de la catégorie
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/jeu'
+        "404":
+          description: Catégorie non trouvée
+              
+components:
+  schemas:
+    association:
+      type: object
+      properties: 
+        nom: 
+          type: string
+        adresse:
+          type: string
+        jeux:
+          type: array
+          items: 
+            $ref: '#/components/schemas/jeu'
+        membres:
+          type: array
+          items:
+            $ref: '#/components/schemas/membre'
+
+
+    jeu:
+      type: object
+      properties: 
+        nom: 
+          type: string
+        description:
+          type: string
+        dataAchat:
+          type: string
+        etat:
+          type: string
+          enum: ["neuf", "bon état", "abimé", "délabré"]
+        disponibilite:
+          type: string
+          enum: ["disponible", "emprunté"]
+        categorie:
+          $ref: '#/components/schemas/categorie'
+        emprunte:
+          $ref: '#/components/schemas/membre'
+          nullable: true
+
+
+    categorie:
+      type: object
+      properties: 
+        nom: 
+          type: string
+        description:
+          type: string
+        nombreJeux:
+          type: integer
+        jeux:
+          type: array
+          items: 
+            $ref: '#/components/schemas/jeu'
+
+
+    membre:
+      type: object
+      properties: 
+        nom: 
+          type: string
+        prenom:
+          type: string
+        telephone:
+          type: integer
+
+
+  parameters:
+    limitParam:
+      name: limit
+      in: query
+      description: Nombre maximum d'Ã©lÃ©ments Ã  retourner.
+      required: false
+      schema:
+        maximum: 100
+        minimum: 1
+        type: integer
+        format: int32
+        default: 20
