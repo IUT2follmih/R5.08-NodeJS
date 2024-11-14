@@ -309,6 +309,21 @@ components:
         key: { type: string }
         energyLevel: { type: string }
         mood: { type: string }
+        albumId: { type: string }
+        albumTitle: { type: string }
+        mainArtistId: { type: string }
+        mainArtistName: { type: string }
+        featuredArtists:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              name: { type: string }
+        producerId: { type: string }
+        producerName: { type: string }
+        stats: { $ref: '#/components/schemas/Stats' }
+        musicalInfo: { $ref: '#/components/schemas/MusicalInfo' }
 
     Artist:
       type: object
@@ -318,7 +333,20 @@ components:
         spotifyId: { type: string }
         country: { type: string }
         type: { type: string, enum: [ solo, band ] }
-
+        albums:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              title: { type: string }
+        tracks:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              title: { type: string }
     Album:
       type: object
       properties:
@@ -328,12 +356,28 @@ components:
         totalTracks: { type: integer }
         label: { type: string }
         distribution: { type: string }
+        artistId: { type: string }
+        artistName: { type: string }
+        tracks:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              title: { type: string }
 
     Producer:
       type: object
       properties:
         id: { type: string }
         name: { type: string }
+        tracks:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              title: { type: string }
 
     Stats:
       type: object
