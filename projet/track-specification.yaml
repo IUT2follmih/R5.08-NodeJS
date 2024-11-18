@@ -28,6 +28,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Track'
+    post:
+      tags: [ Tracks ]
+      summary: Create a new track
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Track'
+      responses:
+        201:
+          description: Track created successfully
+
 
   /tracks/{id}:
     get:
@@ -45,6 +58,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Track'
+    put:
+      tags: [ Tracks ]
+      summary: Update a track
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Track'
+      responses:
+        200:
+          description: Track updated successfully
+    delete:
+      tags: [ Tracks ]
+      summary: Delete a track
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        204:
+          description: Track deleted successfully
+
 
   /albums:
     get:
@@ -66,6 +108,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Album'
+    post:
+      tags: [ Albums ]
+      summary: Create a new album
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Album'
+      responses:
+        201:
+          description: Album created successfully
+
 
   /albums/{id}:
     get:
@@ -83,6 +138,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Album'
+    put:
+      tags: [ Albums ]
+      summary: Update an album
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Album'
+      responses:
+        200:
+          description: Album updated successfully
+    delete:
+      tags: [ Albums ]
+      summary: Delete an album
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        204:
+          description: Album deleted successfully
+
 
   /artists:
     get:
@@ -104,6 +188,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Artist'
+    post:
+      tags: [ Artists ]
+      summary: Create a new artist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Artist'
+      responses:
+        201:
+          description: Artist created successfully
+
 
   /artists/{id}:
     get:
@@ -121,6 +218,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Artist'
+    put:
+      tags: [ Artists ]
+      summary: Update an artist
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Artist'
+      responses:
+        200:
+          description: Artist updated successfully
+    delete:
+      tags: [ Artists ]
+      summary: Delete an artist
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        204:
+          description: Artist deleted successfully
+
 
   /producers:
     get:
@@ -142,6 +268,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Producer'
+    post:
+      tags: [ Producers ]
+      summary: Create a new producer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producer'
+      responses:
+        201:
+          description: Producer created successfully
+
 
   /producers/{id}:
     get:
@@ -159,6 +298,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Producer'
+    put:
+      tags: [ Producers ]
+      summary: Update a producer
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producer'
+      responses:
+        200:
+          description: Producer updated successfully
+    delete:
+      tags: [ Producers ]
+      summary: Delete a producer
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        204:
+          description: Producer deleted successfully
+
 
   /tracks/{id}/musical-info:
     get:
