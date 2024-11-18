@@ -1,0 +1,903 @@
+openapi: 3.0.0
+info:
+  title: Music API
+  description: "API for managing music tracks, artists, albums and related information"
+  version: 1.0.0
+servers:
+- url: http://localhost:3000/api/v1
+paths:
+  /tracks:
+    get:
+      tags:
+      - Tracks
+      summary: Get all tracks
+      operationId: tracksGET
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of tracks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Track'
+                x-content-type: application/json
+      x-swagger-router-controller: Tracks
+    post:
+      tags:
+      - Tracks
+      summary: Create a new track
+      operationId: tracksPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Track'
+        required: true
+      responses:
+        "201":
+          description: Track created successfully
+      x-swagger-router-controller: Tracks
+  /tracks/{id}:
+    get:
+      tags:
+      - Tracks
+      summary: Get track by ID
+      operationId: tracksIdGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Track details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Track'
+      x-swagger-router-controller: Tracks
+    put:
+      tags:
+      - Tracks
+      summary: Update a track
+      operationId: tracksIdPUT
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Track'
+        required: true
+      responses:
+        "200":
+          description: Track updated successfully
+      x-swagger-router-controller: Tracks
+    delete:
+      tags:
+      - Tracks
+      summary: Delete a track
+      operationId: tracksIdDELETE
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Track deleted successfully
+      x-swagger-router-controller: Tracks
+  /albums:
+    get:
+      tags:
+      - Albums
+      summary: Get all albums
+      operationId: albumsGET
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of albums
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Album'
+                x-content-type: application/json
+      x-swagger-router-controller: Albums
+    post:
+      tags:
+      - Albums
+      summary: Create a new album
+      operationId: albumsPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Album'
+        required: true
+      responses:
+        "201":
+          description: Album created successfully
+      x-swagger-router-controller: Albums
+  /albums/{id}:
+    get:
+      tags:
+      - Albums
+      summary: Get album by ID
+      operationId: albumsIdGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Album details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+      x-swagger-router-controller: Albums
+    put:
+      tags:
+      - Albums
+      summary: Update an album
+      operationId: albumsIdPUT
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Album'
+        required: true
+      responses:
+        "200":
+          description: Album updated successfully
+      x-swagger-router-controller: Albums
+    delete:
+      tags:
+      - Albums
+      summary: Delete an album
+      operationId: albumsIdDELETE
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Album deleted successfully
+      x-swagger-router-controller: Albums
+  /artists:
+    get:
+      tags:
+      - Artists
+      summary: Get all artists
+      operationId: artistsGET
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of artists
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Artist'
+                x-content-type: application/json
+      x-swagger-router-controller: Artists
+    post:
+      tags:
+      - Artists
+      summary: Create a new artist
+      operationId: artistsPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Artist'
+        required: true
+      responses:
+        "201":
+          description: Artist created successfully
+      x-swagger-router-controller: Artists
+  /artists/{id}:
+    get:
+      tags:
+      - Artists
+      summary: Get artist by ID
+      operationId: artistsIdGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Artist details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artist'
+      x-swagger-router-controller: Artists
+    put:
+      tags:
+      - Artists
+      summary: Update an artist
+      operationId: artistsIdPUT
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Artist'
+        required: true
+      responses:
+        "200":
+          description: Artist updated successfully
+      x-swagger-router-controller: Artists
+    delete:
+      tags:
+      - Artists
+      summary: Delete an artist
+      operationId: artistsIdDELETE
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Artist deleted successfully
+      x-swagger-router-controller: Artists
+  /producers:
+    get:
+      tags:
+      - Producers
+      summary: Get all producers
+      operationId: producersGET
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of producers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Producer'
+                x-content-type: application/json
+      x-swagger-router-controller: Producers
+    post:
+      tags:
+      - Producers
+      summary: Create a new producer
+      operationId: producersPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producer'
+        required: true
+      responses:
+        "201":
+          description: Producer created successfully
+      x-swagger-router-controller: Producers
+  /producers/{id}:
+    get:
+      tags:
+      - Producers
+      summary: Get producer by ID
+      operationId: producersIdGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Producer details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Producer'
+      x-swagger-router-controller: Producers
+    put:
+      tags:
+      - Producers
+      summary: Update a producer
+      operationId: producersIdPUT
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Producer'
+        required: true
+      responses:
+        "200":
+          description: Producer updated successfully
+      x-swagger-router-controller: Producers
+    delete:
+      tags:
+      - Producers
+      summary: Delete a producer
+      operationId: producersIdDELETE
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Producer deleted successfully
+      x-swagger-router-controller: Producers
+  /tracks/{id}/musical-info:
+    get:
+      tags:
+      - Tracks
+      summary: Get musical info of a track
+      operationId: tracksIdMusical_infoGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Musical info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MusicalInfo'
+      x-swagger-router-controller: Tracks
+  /tracks/{id}/stats:
+    get:
+      tags:
+      - Tracks
+      summary: Get stats of a track
+      operationId: tracksIdStatsGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Track statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stats'
+      x-swagger-router-controller: Tracks
+  /artists/{id}/tracks:
+    get:
+      tags:
+      - Artists
+      summary: Get tracks by artist
+      operationId: artistsIdTracksGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of tracks by artist
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Track'
+                x-content-type: application/json
+      x-swagger-router-controller: Artists
+  /tracks/genre/{genre}:
+    get:
+      tags:
+      - Tracks
+      summary: Get tracks by genre
+      operationId: tracksGenreGenreGET
+      parameters:
+      - name: genre
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of tracks by genre
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Track'
+                x-content-type: application/json
+      x-swagger-router-controller: Tracks
+  /albums/{id}/tracks:
+    get:
+      tags:
+      - Albums
+      summary: Get tracks from album
+      operationId: albumsIdTracksGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of tracks from album
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Track'
+                x-content-type: application/json
+      x-swagger-router-controller: Albums
+  /producers/{id}/tracks:
+    get:
+      tags:
+      - Producers
+      summary: Get tracks by producer
+      operationId: producersIdTracksGET
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 20
+      - name: offset
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          default: 0
+      responses:
+        "200":
+          description: List of tracks by producer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Track'
+                x-content-type: application/json
+      x-swagger-router-controller: Producers
+components:
+  schemas:
+    Track:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        isrc:
+          type: string
+        duration:
+          type: string
+        bpm:
+          type: integer
+        language:
+          type: string
+        releaseYear:
+          type: integer
+        key:
+          type: string
+        energyLevel:
+          type: string
+        mood:
+          type: string
+        albumId:
+          type: string
+        albumTitle:
+          type: string
+        mainArtistId:
+          type: string
+        mainArtistName:
+          type: string
+        featuredArtists:
+          type: array
+          items:
+            $ref: '#/components/schemas/Track_featuredArtists'
+        producerId:
+          type: string
+        producerName:
+          type: string
+        stats:
+          $ref: '#/components/schemas/Stats'
+        musicalInfo:
+          $ref: '#/components/schemas/MusicalInfo'
+      example:
+        mood: mood
+        producerName: producerName
+        albumId: albumId
+        isrc: isrc
+        language: language
+        title: title
+        featuredArtists:
+        - name: name
+          id: id
+        - name: name
+          id: id
+        mainArtistId: mainArtistId
+        duration: duration
+        musicalInfo:
+          instruments:
+          - instruments
+          - instruments
+          mood: mood
+          energyLevel: energyLevel
+          style: style
+          key: key
+        energyLevel: energyLevel
+        stats:
+          shares: 5
+          downloads: 2
+          peakPosition: 7
+          streams: 1
+          weeklyTrend: weeklyTrend
+          likes: 5
+        albumTitle: albumTitle
+        id: id
+        mainArtistName: mainArtistName
+        producerId: producerId
+        releaseYear: 6
+        bpm: 0
+        key: key
+    Artist:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        spotifyId:
+          type: string
+        country:
+          type: string
+        type:
+          type: string
+          enum:
+          - solo
+          - band
+        albums:
+          type: array
+          items:
+            $ref: '#/components/schemas/Artist_albums'
+        tracks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Artist_albums'
+      example:
+        country: country
+        albums:
+        - id: id
+          title: title
+        - id: id
+          title: title
+        name: name
+        spotifyId: spotifyId
+        id: id
+        type: solo
+        tracks:
+        - null
+        - null
+    Album:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        releaseDate:
+          type: string
+          format: date
+        totalTracks:
+          type: integer
+        label:
+          type: string
+        distribution:
+          type: string
+        artistId:
+          type: string
+        artistName:
+          type: string
+        tracks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Artist_albums'
+      example:
+        releaseDate: 2000-01-23
+        totalTracks: 0
+        artistId: artistId
+        artistName: artistName
+        id: id
+        label: label
+        title: title
+        distribution: distribution
+        tracks:
+        - id: id
+          title: title
+        - id: id
+          title: title
+    Producer:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        tracks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Artist_albums'
+      example:
+        name: name
+        id: id
+        tracks:
+        - id: id
+          title: title
+        - id: id
+          title: title
+    Stats:
+      type: object
+      properties:
+        streams:
+          type: integer
+          format: int64
+        likes:
+          type: integer
+        shares:
+          type: integer
+        downloads:
+          type: integer
+        peakPosition:
+          type: integer
+        weeklyTrend:
+          type: string
+      example:
+        shares: 5
+        downloads: 2
+        peakPosition: 7
+        streams: 1
+        weeklyTrend: weeklyTrend
+        likes: 5
+    MusicalInfo:
+      type: object
+      properties:
+        instruments:
+          type: array
+          items:
+            type: string
+        style:
+          type: string
+        key:
+          type: string
+        energyLevel:
+          type: string
+        mood:
+          type: string
+      example:
+        instruments:
+        - instruments
+        - instruments
+        mood: mood
+        energyLevel: energyLevel
+        style: style
+        key: key
+    Track_featuredArtists:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+      example:
+        name: name
+        id: id
+    Artist_albums:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+      example:
+        id: id
+        title: title
