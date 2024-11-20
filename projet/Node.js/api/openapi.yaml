@@ -4,31 +4,31 @@ info:
   description: "API for managing music tracks, artists, albums and related information"
   version: 1.0.0
 servers:
-- url: http://localhost:3000/
+  - url: http://localhost:3000/
 paths:
   /tracks:
     get:
       tags:
-      - Tracks
+        - Tracks
       summary: Get all tracks
       operationId: tracksGET
       parameters:
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of tracks
@@ -42,7 +42,7 @@ paths:
       x-swagger-router-controller: Tracks
     post:
       tags:
-      - Tracks
+        - Tracks
       summary: Create a new track
       operationId: tracksPOST
       requestBody:
@@ -58,17 +58,17 @@ paths:
   /tracks/{id}:
     get:
       tags:
-      - Tracks
+        - Tracks
       summary: Get track by ID
       operationId: tracksIdGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "200":
           description: Track details
@@ -79,17 +79,17 @@ paths:
       x-swagger-router-controller: Tracks
     put:
       tags:
-      - Tracks
+        - Tracks
       summary: Update a track
       operationId: tracksIdPUT
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -102,17 +102,17 @@ paths:
       x-swagger-router-controller: Tracks
     delete:
       tags:
-      - Tracks
+        - Tracks
       summary: Delete a track
       operationId: tracksIdDELETE
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "204":
           description: Track deleted successfully
@@ -120,26 +120,26 @@ paths:
   /albums:
     get:
       tags:
-      - Albums
+        - Albums
       summary: Get all albums
       operationId: albumsGET
       parameters:
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of albums
@@ -153,7 +153,7 @@ paths:
       x-swagger-router-controller: Albums
     post:
       tags:
-      - Albums
+        - Albums
       summary: Create a new album
       operationId: albumsPOST
       requestBody:
@@ -169,17 +169,17 @@ paths:
   /albums/{id}:
     get:
       tags:
-      - Albums
+        - Albums
       summary: Get album by ID
       operationId: albumsIdGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "200":
           description: Album details
@@ -190,17 +190,17 @@ paths:
       x-swagger-router-controller: Albums
     put:
       tags:
-      - Albums
+        - Albums
       summary: Update an album
       operationId: albumsIdPUT
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -213,17 +213,17 @@ paths:
       x-swagger-router-controller: Albums
     delete:
       tags:
-      - Albums
+        - Albums
       summary: Delete an album
       operationId: albumsIdDELETE
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "204":
           description: Album deleted successfully
@@ -231,26 +231,26 @@ paths:
   /artists:
     get:
       tags:
-      - Artists
+        - Artists
       summary: Get all artists
       operationId: artistsGET
       parameters:
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of artists
@@ -264,7 +264,7 @@ paths:
       x-swagger-router-controller: Artists
     post:
       tags:
-      - Artists
+        - Artists
       summary: Create a new artist
       operationId: artistsPOST
       requestBody:
@@ -280,17 +280,17 @@ paths:
   /artists/{id}:
     get:
       tags:
-      - Artists
+        - Artists
       summary: Get artist by ID
       operationId: artistsIdGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "200":
           description: Artist details
@@ -301,17 +301,17 @@ paths:
       x-swagger-router-controller: Artists
     put:
       tags:
-      - Artists
+        - Artists
       summary: Update an artist
       operationId: artistsIdPUT
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -324,17 +324,17 @@ paths:
       x-swagger-router-controller: Artists
     delete:
       tags:
-      - Artists
+        - Artists
       summary: Delete an artist
       operationId: artistsIdDELETE
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "204":
           description: Artist deleted successfully
@@ -342,26 +342,26 @@ paths:
   /producers:
     get:
       tags:
-      - Producers
+        - Producers
       summary: Get all producers
       operationId: producersGET
       parameters:
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of producers
@@ -375,7 +375,7 @@ paths:
       x-swagger-router-controller: Producers
     post:
       tags:
-      - Producers
+        - Producers
       summary: Create a new producer
       operationId: producersPOST
       requestBody:
@@ -391,17 +391,17 @@ paths:
   /producers/{id}:
     get:
       tags:
-      - Producers
+        - Producers
       summary: Get producer by ID
       operationId: producersIdGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "200":
           description: Producer details
@@ -412,17 +412,17 @@ paths:
       x-swagger-router-controller: Producers
     put:
       tags:
-      - Producers
+        - Producers
       summary: Update a producer
       operationId: producersIdPUT
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -435,17 +435,17 @@ paths:
       x-swagger-router-controller: Producers
     delete:
       tags:
-      - Producers
+        - Producers
       summary: Delete a producer
       operationId: producersIdDELETE
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "204":
           description: Producer deleted successfully
@@ -453,17 +453,17 @@ paths:
   /tracks/{id}/musical-info:
     get:
       tags:
-      - Tracks
+        - Tracks
       summary: Get musical info of a track
       operationId: tracksIdMusical_infoGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "200":
           description: Musical info
@@ -475,17 +475,17 @@ paths:
   /tracks/{id}/stats:
     get:
       tags:
-      - Tracks
+        - Tracks
       summary: Get stats of a track
       operationId: tracksIdStatsGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
       responses:
         "200":
           description: Track statistics
@@ -497,33 +497,33 @@ paths:
   /artists/{id}/tracks:
     get:
       tags:
-      - Artists
+        - Artists
       summary: Get tracks by artist
       operationId: artistsIdTracksGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of tracks by artist
@@ -535,39 +535,39 @@ paths:
                   $ref: '#/components/schemas/Track'
                 x-content-type: application/json
       x-swagger-router-controller: Artists
-  /tracks/genre/{genre}:
+  /tracks/style/{style}:
     get:
       tags:
-      - Tracks
-      summary: Get tracks by genre
-      operationId: tracksGenreGenreGET
+        - Tracks
+      summary: Get tracks by style
+      operationId: tracksByStyleGET
       parameters:
-      - name: genre
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: style
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
-          description: List of tracks by genre
+          description: List of tracks by style
           content:
             application/json:
               schema:
@@ -579,33 +579,33 @@ paths:
   /albums/{id}/tracks:
     get:
       tags:
-      - Albums
+        - Albums
       summary: Get tracks from album
       operationId: albumsIdTracksGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of tracks from album
@@ -620,33 +620,33 @@ paths:
   /producers/{id}/tracks:
     get:
       tags:
-      - Producers
+        - Producers
       summary: Get tracks by producer
       operationId: producersIdTracksGET
       parameters:
-      - name: id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: limit
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 20
-      - name: offset
-        in: query
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: integer
-          default: 0
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            default: 0
       responses:
         "200":
           description: List of tracks by producer
@@ -711,16 +711,16 @@ components:
         language: language
         title: title
         featuredArtists:
-        - name: name
-          id: id
-        - name: name
-          id: id
+          - name: name
+            id: id
+          - name: name
+            id: id
         mainArtistId: mainArtistId
         duration: duration
         musicalInfo:
           instruments:
-          - instruments
-          - instruments
+            - instruments
+            - instruments
           mood: mood
           energyLevel: energyLevel
           style: style
@@ -754,8 +754,8 @@ components:
         type:
           type: string
           enum:
-          - solo
-          - band
+            - solo
+            - band
         albums:
           type: array
           items:
@@ -767,17 +767,17 @@ components:
       example:
         country: country
         albums:
-        - id: id
-          title: title
-        - id: id
-          title: title
+          - id: id
+            title: title
+          - id: id
+            title: title
         name: name
         spotifyId: spotifyId
         id: id
         type: solo
         tracks:
-        - null
-        - null
+          - null
+          - null
     Album:
       type: object
       properties:
@@ -812,10 +812,10 @@ components:
         title: title
         distribution: distribution
         tracks:
-        - id: id
-          title: title
-        - id: id
-          title: title
+          - id: id
+            title: title
+          - id: id
+            title: title
     Producer:
       type: object
       properties:
@@ -831,10 +831,10 @@ components:
         name: name
         id: id
         tracks:
-        - id: id
-          title: title
-        - id: id
-          title: title
+          - id: id
+            title: title
+          - id: id
+            title: title
     Stats:
       type: object
       properties:
@@ -875,8 +875,8 @@ components:
           type: string
       example:
         instruments:
-        - instruments
-        - instruments
+          - instruments
+          - instruments
         mood: mood
         energyLevel: energyLevel
         style: style

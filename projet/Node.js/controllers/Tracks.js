@@ -43,13 +43,46 @@ module.exports.tracksIdMusical_infoGET = function tracksIdMusical_infoGET(req, r
             })
             .catch(function (error) {
                 console.error('Error in tracksIdMusical_infoGET:', error);
-                utils.writeJson(res, {error: error.message}, 404);
+                utils.writeJson(res, {error: error.message}, error.code || 500);
             });
     } catch (error) {
         console.error('Unexpected error in tracksIdMusical_infoGET:', error);
         utils.writeJson(res, {error: 'Internal Server Error'}, 500);
     }
 }
+
+module.exports.tracksIdStatsGET = function tracksIdStatsGET(req, res, next, id) {
+    try {
+        TracksService.tracksIdStatsGET(id)
+            .then(function (response) {
+                utils.writeJson(res, response);
+            })
+            .catch(function (error) {
+                console.error('Error in tracksIdStatsGET:', error);
+                utils.writeJson(res, {error: error.message}, error.code || 500);
+            });
+    } catch (error) {
+        console.error('Unexpected error in tracksIdStatsGET:', error);
+        utils.writeJson(res, {error: 'Internal Server Error'}, 500);
+    }
+};
+
+module.exports.tracksByStyleGET = function tracksByStyleGET(req, res, next, style, limit, offset) {
+    try {
+        TracksService.tracksByStyleGET(style, limit, offset)
+            .then(function (response) {
+                utils.writeJson(res, response);
+            })
+            .catch(function (error) {
+                console.error('Error in tracksByStyleGET:', error);
+                utils.writeJson(res, {error: error.message}, 500);
+            });
+    } catch (error) {
+        console.error('Unexpected error in tracksByStyleGET:', error);
+        utils.writeJson(res, {error: 'Internal Server Error'}, 500);
+    }
+}
+
 
 module.exports.tracksIdPUT = function tracksIdPUT(req, res, next, body, id) {
     try {

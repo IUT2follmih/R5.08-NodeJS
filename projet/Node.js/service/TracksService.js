@@ -14,19 +14,6 @@ exports.tracksGET = function (limit = 20, offset = 0) {
     });
 }
 
-exports.tracksGenreGenreGET = function (genre, limit = 20, offset = 0) {
-    return new Promise(function (resolve, reject) {
-        try {
-            const filteredTracks = data.tracks
-                .filter(track => track.musicalInfo.style.toLowerCase() === genre.toLowerCase())
-                .slice(offset, Math.min(offset + limit, data.tracks.length));
-            resolve(filteredTracks);
-        } catch (error) {
-            reject(error);
-        }
-    });
-}
-
 exports.tracksIdDELETE = function (id) {
     return new Promise(function (resolve, reject) {
         try {
@@ -82,6 +69,7 @@ exports.tracksIdMusical_infoGET = function (id) {
     });
 }
 
+
 exports.tracksIdPUT = function (body, id) {
     return new Promise(function (resolve, reject) {
         try {
@@ -113,6 +101,19 @@ exports.tracksIdStatsGET = function (id) {
             } else {
                 resolve(track.stats);
             }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+exports.tracksByStyleGET = function (style, limit = 20, offset = 0) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const filteredTracks = data.tracks
+                .filter(track => track.musicalInfo.style.toLowerCase() === style.toLowerCase())
+                .slice(offset, Math.min(offset + limit, data.tracks.length));
+            resolve(filteredTracks);
         } catch (error) {
             reject(error);
         }
