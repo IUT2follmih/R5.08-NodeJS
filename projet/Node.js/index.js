@@ -22,7 +22,7 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const trackRoutes = require('./routes/routeTracks');
 const albumRoutes = require('./routes/routeAlbums');
 const artistRoutes = require('./routes/routeArtists');
-const producerRoutes = require('./routes/routeProduceurs');
+const producerRoutes = require('./routes/routeProducers');
 
 // Définir le préfixe pour toutes les routes de l'API
 app.use('/', trackRoutes);

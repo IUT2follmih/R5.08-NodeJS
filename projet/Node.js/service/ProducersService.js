@@ -1,210 +1,107 @@
 'use strict';
 
+const data = require('../data/donnees.json');
 
-/**
- * Get all producers
- *
- * limit Integer  (optional)
- * offset Integer  (optional)
- * returns List
- **/
-exports.producersGET = function(limit,offset) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "name" : "name",
-  "id" : "id",
-  "tracks" : [ {
-    "id" : "id",
-    "title" : "title"
-  }, {
-    "id" : "id",
-    "title" : "title"
-  } ]
-}, {
-  "name" : "name",
-  "id" : "id",
-  "tracks" : [ {
-    "id" : "id",
-    "title" : "title"
-  }, {
-    "id" : "id",
-    "title" : "title"
-  } ]
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+exports.producersGET = function (limit = 20, offset = 0) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const producers = data.producers
+                .slice(offset, Math.min(offset + limit, data.producers.length));
+            resolve(producers);
+        } catch (error) {
+            reject(error);
+        }
+    });
 }
 
-
-/**
- * Delete a producer
- *
- * id String 
- * no response value expected for this operation
- **/
-exports.producersIdDELETE = function(id) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.producersPOST = function (body) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const newProducer = {
+                id: `producer_${data.producers.length + 1}`,
+                ...body
+            };
+            data.producers.push(newProducer);
+            resolve(newProducer);
+        } catch (error) {
+            reject(error);
+        }
+    });
 }
 
-
-/**
- * Get producer by ID
- *
- * id String 
- * returns Producer
- **/
-exports.producersIdGET = function(id) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "name" : "name",
-  "id" : "id",
-  "tracks" : [ {
-    "id" : "id",
-    "title" : "title"
-  }, {
-    "id" : "id",
-    "title" : "title"
-  } ]
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+exports.producersIdGET = function (id) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const producer = data.producers.find(producer => producer.id === id);
+            if (!producer) {
+                reject({
+                    code: 404,
+                    message: 'Producer not found'
+                });
+            } else {
+                resolve(producer);
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
 }
 
-
-/**
- * Update a producer
- *
- * body Producer 
- * id String 
- * no response value expected for this operation
- **/
-exports.producersIdPUT = function(body,id) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.producersIdPUT = function (body, id) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const index = data.producers.findIndex(producer => producer.id === id);
+            if (index === -1) {
+                reject({
+                    code: 404,
+                    message: 'Producer not found'
+                });
+            } else {
+                data.producers[index] = {...data.producers[index], ...body};
+                resolve();
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
 }
 
-
-/**
- * Get tracks by producer
- *
- * id String 
- * limit Integer  (optional)
- * offset Integer  (optional)
- * returns List
- **/
-exports.producersIdTracksGET = function(id,limit,offset) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = [ {
-  "mood" : "mood",
-  "producerName" : "producerName",
-  "albumId" : "albumId",
-  "isrc" : "isrc",
-  "language" : "language",
-  "title" : "title",
-  "featuredArtists" : [ {
-    "name" : "name",
-    "id" : "id"
-  }, {
-    "name" : "name",
-    "id" : "id"
-  } ],
-  "mainArtistId" : "mainArtistId",
-  "duration" : "duration",
-  "musicalInfo" : {
-    "instruments" : [ "instruments", "instruments" ],
-    "mood" : "mood",
-    "energyLevel" : "energyLevel",
-    "style" : "style",
-    "key" : "key"
-  },
-  "energyLevel" : "energyLevel",
-  "stats" : {
-    "shares" : 5,
-    "downloads" : 2,
-    "peakPosition" : 7,
-    "streams" : 1,
-    "weeklyTrend" : "weeklyTrend",
-    "likes" : 5
-  },
-  "albumTitle" : "albumTitle",
-  "id" : "id",
-  "mainArtistName" : "mainArtistName",
-  "producerId" : "producerId",
-  "releaseYear" : 6,
-  "bpm" : 0,
-  "key" : "key"
-}, {
-  "mood" : "mood",
-  "producerName" : "producerName",
-  "albumId" : "albumId",
-  "isrc" : "isrc",
-  "language" : "language",
-  "title" : "title",
-  "featuredArtists" : [ {
-    "name" : "name",
-    "id" : "id"
-  }, {
-    "name" : "name",
-    "id" : "id"
-  } ],
-  "mainArtistId" : "mainArtistId",
-  "duration" : "duration",
-  "musicalInfo" : {
-    "instruments" : [ "instruments", "instruments" ],
-    "mood" : "mood",
-    "energyLevel" : "energyLevel",
-    "style" : "style",
-    "key" : "key"
-  },
-  "energyLevel" : "energyLevel",
-  "stats" : {
-    "shares" : 5,
-    "downloads" : 2,
-    "peakPosition" : 7,
-    "streams" : 1,
-    "weeklyTrend" : "weeklyTrend",
-    "likes" : 5
-  },
-  "albumTitle" : "albumTitle",
-  "id" : "id",
-  "mainArtistName" : "mainArtistName",
-  "producerId" : "producerId",
-  "releaseYear" : 6,
-  "bpm" : 0,
-  "key" : "key"
-} ];
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+exports.producersIdDELETE = function (id) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const index = data.producers.findIndex(producer => producer.id === id);
+            if (index === -1) {
+                reject({
+                    code: 404,
+                    message: 'Producer not found'
+                });
+            } else {
+                data.producers.splice(index, 1);
+                resolve();
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
 }
 
-
-/**
- * Create a new producer
- *
- * body Producer 
- * no response value expected for this operation
- **/
-exports.producersPOST = function(body) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.producersIdTracksGET = function (id, limit = 20, offset = 0) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const producer = data.producers.find(producer => producer.id === id);
+            if (!producer) {
+                reject({
+                    code: 404,
+                    message: 'Producer not found'
+                });
+            } else {
+                const producerTracks = data.tracks
+                    .filter(track => track.producer === id)
+                    .slice(offset, Math.min(offset + limit, data.tracks.length));
+                resolve(producerTracks);
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
 }
-

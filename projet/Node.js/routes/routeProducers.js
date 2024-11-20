@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const TrackService = require('../service/TracksService');
+const ProducersService = require('../service/ProducersService');
 
 // GET /tracks
-router.get('/tracks', async (req, res) => {
+router.get('/producers', async (req, res) => {
     try {
         const {limit = 20, offset = 0} = req.query;
-        const result = await TrackService.tracksGET(limit, offset);
+        const result = await ProducersService.producersGET(limit, offset);
         res.json(result);
     } catch (error) {
         res.status(500).json({error: error.message});
@@ -14,9 +14,9 @@ router.get('/tracks', async (req, res) => {
 });
 
 // Autres routes...
-router.get('/tracks/:id', async (req, res) => {
+router.get('/producers/:id', async (req, res) => {
     try {
-        const result = await TrackService.tracksIdGET(req.params.id);
+        const result = await ProducersService.producersIdGET(req.params.id);
         res.json(result);
     } catch (error) {
         res.status(404).json({error: error.message});
