@@ -10,6 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "lorem-ipsum": "^2.0.8"
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "lorem-ipsum": "^2.0.8",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
   }
 }
