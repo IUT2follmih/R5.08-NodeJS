@@ -23,4 +23,13 @@ router.get('/tracks/:id', async (req, res) => {
     }
 });
 
+router.get('tracks/:id/musical-info', async (req, res) => {
+    try {
+        const result = await TrackService.tracksIdMusical_infoGET(req.params.id);
+        res.json(result);
+    } catch (error) {
+        res.status(404).json({error: error.message});
+    }
+});
+
 module.exports = router;

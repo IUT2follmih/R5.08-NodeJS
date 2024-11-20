@@ -35,21 +35,21 @@ module.exports.tracksIdGET = function tracksIdGET(req, res, next, id) {
     }
 };
 
-module.exports.tracksIdTracksGET = function tracksIdTracksGET(req, res, next, id, limit, offset) {
+module.exports.tracksIdMusical_infoGET = function tracksIdMusical_infoGET(req, res, next, id) {
     try {
-        TracksService.tracksIdTracksGET(id, limit, offset)
+        TracksService.tracksIdMusical_infoGET(id)
             .then(function (response) {
                 utils.writeJson(res, response);
             })
             .catch(function (error) {
-                console.error('Error in tracksIdTracksGET:', error);
+                console.error('Error in tracksIdMusical_infoGET:', error);
                 utils.writeJson(res, {error: error.message}, 404);
             });
     } catch (error) {
-        console.error('Unexpected error in tracksIdTracksGET:', error);
+        console.error('Unexpected error in tracksIdMusical_infoGET:', error);
         utils.writeJson(res, {error: 'Internal Server Error'}, 500);
     }
-};
+}
 
 module.exports.tracksIdPUT = function tracksIdPUT(req, res, next, body, id) {
     try {
