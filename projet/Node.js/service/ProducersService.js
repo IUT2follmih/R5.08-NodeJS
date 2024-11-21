@@ -14,21 +14,6 @@ exports.producersGET = function (limit = 20, offset = 0) {
     });
 }
 
-exports.producersPOST = function (body) {
-    return new Promise(function (resolve, reject) {
-        try {
-            const newProducer = {
-                id: `producer_${data.producers.length + 1}`,
-                ...body
-            };
-            data.producers.push(newProducer);
-            resolve(newProducer);
-        } catch (error) {
-            reject(error);
-        }
-    });
-}
-
 exports.producersIdGET = function (id) {
     return new Promise(function (resolve, reject) {
         try {
@@ -41,6 +26,42 @@ exports.producersIdGET = function (id) {
             } else {
                 resolve(producer);
             }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+exports.producersIdTracksGET = function (id, limit = 20, offset = 0) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const producer = data.producers.find(producer => producer.id === id);
+            if (!producer) {
+                reject({
+                    code: 404,
+                    message: 'Producer not found'
+                });
+            } else {
+                const producerTracks = data.tracks
+                    .filter(track => track.producerId === id)
+                    .slice(offset, Math.min(offset + limit, data.tracks.length));
+                resolve(producerTracks);
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+exports.producersPOST = function (body) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const newProducer = {
+                id: `producer_${data.producers.length + 1}`,
+                ...body
+            };
+            data.producers.push(newProducer);
+            resolve(newProducer);
         } catch (error) {
             reject(error);
         }
@@ -78,27 +99,6 @@ exports.producersIdDELETE = function (id) {
             } else {
                 data.producers.splice(index, 1);
                 resolve();
-            }
-        } catch (error) {
-            reject(error);
-        }
-    });
-}
-
-exports.producersIdTracksGET = function (id, limit = 20, offset = 0) {
-    return new Promise(function (resolve, reject) {
-        try {
-            const producer = data.producers.find(producer => producer.id === id);
-            if (!producer) {
-                reject({
-                    code: 404,
-                    message: 'Producer not found'
-                });
-            } else {
-                const producerTracks = data.tracks
-                    .filter(track => track.producer === id)
-                    .slice(offset, Math.min(offset + limit, data.tracks.length));
-                resolve(producerTracks);
             }
         } catch (error) {
             reject(error);
