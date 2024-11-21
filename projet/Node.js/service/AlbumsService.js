@@ -14,25 +14,6 @@ exports.albumsGET = function (limit = 20, offset = 0) {
     });
 }
 
-exports.albumsIdDELETE = function (id) {
-    return new Promise(function (resolve, reject) {
-        try {
-            const index = data.albums.findIndex(album => album.id === id);
-            if (index === -1) {
-                reject({
-                    code: 404,
-                    message: 'Album not found'
-                });
-            } else {
-                data.albums.splice(index, 1);
-                resolve();
-            }
-        } catch (error) {
-            reject(error);
-        }
-    });
-}
-
 exports.albumsIdGET = function (id) {
     return new Promise(function (resolve, reject) {
         try {
@@ -51,26 +32,6 @@ exports.albumsIdGET = function (id) {
     });
 }
 
-exports.albumsIdPUT = function (body, id) {
-    return new Promise(function (resolve, reject) {
-        try {
-            const index = data.albums.findIndex(album => album.id === id);
-            if (index === -1) {
-                reject({
-                    code: 404,
-                    message: 'Album not found'
-                });
-            } else {
-                data.albums[index] = body;
-                resolve();
-            }
-        } catch (error) {
-            reject(error);
-        }
-    });
-}
-
-
 exports.albumsIdTracksGET = function (id, limit = 20, offset = 0) {
     return new Promise(function (resolve, reject) {
         try {
@@ -81,9 +42,10 @@ exports.albumsIdTracksGET = function (id, limit = 20, offset = 0) {
                     message: 'Album not found'
                 });
             } else {
-                const tracks = album.tracks
-                    .slice(offset, Math.min(offset + limit, album.tracks.length));
-                resolve(tracks);
+                const AlbumsTracks = data.tracks
+                    .filter(track => track.albumId === id)
+                    .slice(offset, Math.min(offset + limit, data.tracks.length));
+                resolve(AlbumsTracks);
             }
         } catch (error) {
             reject(error);
@@ -107,3 +69,41 @@ exports.albumsPOST = function (body) {
     })
 }
 
+
+exports.albumsIdPUT = function (body, id) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const index = data.albums.findIndex(album => album.id === id);
+            if (index === -1) {
+                reject({
+                    code: 404,
+                    message: 'Album not found'
+                });
+            } else {
+                data.albums[index] = body;
+                resolve();
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+exports.albumsIdDELETE = function (id) {
+    return new Promise(function (resolve, reject) {
+        try {
+            const index = data.albums.findIndex(album => album.id === id);
+            if (index === -1) {
+                reject({
+                    code: 404,
+                    message: 'Album not found'
+                });
+            } else {
+                data.albums.splice(index, 1);
+                resolve();
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
