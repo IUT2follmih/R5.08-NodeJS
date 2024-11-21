@@ -51,4 +51,31 @@ router.get('/tracks/style/:style', async (req, res) => {
     }
 });
 
+router.post('/tracks', async (req, res) => {
+    try {
+        await TrackService.tracksPOST(req.body);
+        res.status(201).end();
+    } catch (error) {
+        res.status(400).json({error: error.message});
+    }
+});
+
+router.put('/tracks/:id', async (req, res) => {
+    try {
+        await TrackService.tracksIdPUT(req.body, req.params.id);
+        res.end();
+    } catch (error) {
+        res.status(404).json({error: error.message});
+    }
+});
+
+router.delete('/tracks/:id', async (req, res) => {
+    try {
+        await TrackService.tracksIdDELETE(req.params.id);
+        res.end();
+    } catch (error) {
+        res.status(404).json({error: error.message});
+    }
+});
+
 module.exports = router;

@@ -83,6 +83,22 @@ module.exports.tracksByStyleGET = function tracksByStyleGET(req, res, next, styl
     }
 }
 
+module.exports.tracksPOST = function tracksPOST(req, res, next, body) {
+    try {
+        TracksService.tracksPOST(body)
+            .then(function (response) {
+                utils.writeJson(res, response, 201);
+            })
+            .catch(function (error) {
+                console.error('Error in tracksPOST:', error);
+                utils.writeJson(res, {error: error.message}, 400);
+            });
+    } catch (error) {
+        console.error('Unexpected error in tracksPOST:', error);
+        utils.writeJson(res, {error: 'Internal Server Error'}, 500);
+    }
+};
+
 
 module.exports.tracksIdPUT = function tracksIdPUT(req, res, next, body, id) {
     try {
@@ -112,22 +128,6 @@ module.exports.tracksIdDELETE = function tracksIdDELETE(req, res, next, id) {
             });
     } catch (error) {
         console.error('Unexpected error in tracksIdDELETE:', error);
-        utils.writeJson(res, {error: 'Internal Server Error'}, 500);
-    }
-};
-
-module.exports.tracksPOST = function tracksPOST(req, res, next, body) {
-    try {
-        TracksService.tracksPOST(body)
-            .then(function (response) {
-                utils.writeJson(res, response, 201);
-            })
-            .catch(function (error) {
-                console.error('Error in tracksPOST:', error);
-                utils.writeJson(res, {error: error.message}, 400);
-            });
-    } catch (error) {
-        console.error('Unexpected error in tracksPOST:', error);
         utils.writeJson(res, {error: 'Internal Server Error'}, 500);
     }
 };
