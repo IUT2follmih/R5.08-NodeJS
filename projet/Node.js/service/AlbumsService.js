@@ -2,7 +2,7 @@
 
 const data = require('../data/donnees.json');
 
-exports.albumsGET = function (limit = 20, offset = 0) {
+exports.albumsGET = function (limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
             const albums = data.albums
@@ -32,7 +32,7 @@ exports.albumsIdGET = function (id) {
     });
 }
 
-exports.albumsIdTracksGET = function (id, limit = 20, offset = 0) {
+exports.albumsIdTracksGET = function (id, limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
             const album = data.albums.find(album => album.id === id);

@@ -5,7 +5,7 @@ const ProducersService = require('../service/ProducersService');
 // GET /tracks
 router.get('/producers', async (req, res) => {
     try {
-        const {limit = 20, offset = 0} = req.query;
+        const {limit = 5, offset = 0} = req.query;
         const result = await ProducersService.producersGET(limit, offset);
         res.json(result);
     } catch (error) {

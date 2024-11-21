@@ -2,7 +2,7 @@
 
 const data = require('../data/donnees.json');
 
-exports.producersGET = function (limit = 20, offset = 0) {
+exports.producersGET = function (limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
             const producers = data.producers
@@ -32,7 +32,7 @@ exports.producersIdGET = function (id) {
     });
 }
 
-exports.producersIdTracksGET = function (id, limit = 20, offset = 0) {
+exports.producersIdTracksGET = function (id, limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
             const producer = data.producers.find(producer => producer.id === id);

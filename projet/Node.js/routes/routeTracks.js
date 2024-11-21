@@ -5,7 +5,7 @@ const TrackService = require('../service/TracksService');
 // GET /tracks
 router.get('/tracks', async (req, res) => {
     try {
-        const {limit = 20, offset = 0} = req.query;
+        const {limit = 50, offset = 0} = req.query;
         const result = await TrackService.tracksGET(limit, offset);
         res.json(result);
     } catch (error) {

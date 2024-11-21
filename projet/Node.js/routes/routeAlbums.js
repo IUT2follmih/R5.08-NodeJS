@@ -5,7 +5,7 @@ const AlbumsService = require('../service/AlbumsService');
 // GET /tracks
 router.get('/albums', async (req, res) => {
     try {
-        const {limit = 20, offset = 0} = req.query;
+        const {limit = 15, offset = 0} = req.query;
         const result = await AlbumsService.albumsGET(limit, offset);
         res.json(result);
     } catch (error) {

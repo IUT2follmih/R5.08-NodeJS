@@ -2,7 +2,7 @@
 
 const data = require('../data/donnees.json');
 
-exports.tracksGET = function (limit = 20, offset = 0) {
+exports.tracksGET = function (limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
             const tracks = data.tracks
@@ -32,7 +32,7 @@ exports.tracksIdGET = function (id) {
     });
 }
 
-exports.tracksByStyleGET = function (style, limit = 20, offset = 0) {
+exports.tracksByStyleGET = function (style, limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
             const filteredTracks = data.tracks

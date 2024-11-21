@@ -5,7 +5,7 @@ const ArtistsService = require('../service/ArtistsService');
 // GET /tracks
 router.get('/artists', async (req, res) => {
     try {
-        const {limit = 20, offset = 0} = req.query;
+        const {limit = 10, offset = 0} = req.query;
         const result = await ArtistsService.artistsGET(limit, offset);
         res.json(result);
     } catch (error) {
