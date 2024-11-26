@@ -1,4 +1,4 @@
-# Spécification
+# Spécification système du serveur
 
 ## I. Introduction
 
@@ -11,9 +11,9 @@ musicales.
 
 La documentation détaillée via OpenAPI assure une utilisation claire et efficace du service.
 
-# II.Description des Entités et Relations
+# II. Description des Entités et Relations
 
-### 1. Description des caractéristiques vague
+### 1. Description des caractéristiques vagues
 
 - `key` = tonalité
 - `label` = maison d’édition
