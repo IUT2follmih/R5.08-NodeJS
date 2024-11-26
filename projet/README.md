@@ -1,35 +1,55 @@
-# Spécification
+# Inidcation de lancement et details
 
-## I. Introduction
+## Spécification du système
 
-Ce projet vise à développer une API REST complète en Node.js pour la gestion d'une base de données musicale.
+Pour voir la spécification système tout est expliqué dans ici → [SPECIFICATION](SPECIFICATION.md)
 
-L'objectif principal est de créer un service web documenté avec OpenAPI, permettant d'effectuer des opérations CRUD sur
-différentes entités (pistes, artistes, albums, etc.). L'API est conçue pour être facilement maintenable et extensible,
-offrant une interface standardisée pour les applications clientes qui souhaitent accéder et manipuler les données
-musicales.
+## Lancer le serveur
 
-La documentation détaillée via OpenAPI assure une utilisation claire et efficace du service.
+Pour lancer le serveur, placez-vous dans le dossier Node.js :
 
-# II.Description des Entités et Relations
+```
+cd Node.js
+```
 
-### 1. Description des caractéristiques vague
+En suite vous pouvez lancer le serveur avec la commande :
 
-- `key` = tonalité
-- `label` = maison d’édition
-- `energylevel` =
-    - **Medium**: Groove modéré Énergie constante
-    - **High**: Tempo rapide Bass puissante
-    - **Dynamic**: Commence doucement Monte en puissance
-- `Peak Position` =
-    - Suivi des performances commerciales
-    - Marketing
-    - Historique du succès
-- `Weekly Trend` =
-    - Analyse des tendances
-    - Décisions marketing
-    - Programmation radio
+```
+npm start
+```
 
-### 2. Description des entités et relations
+Puis pour d'informations sur les méthodes que propose le serveur, vous pouvez aller voir la documentation de l'API
 
-![diagUML1.png](diagUML1.png)
+```
+http://localhost:3000/docs
+```
+
+## Jeu de données
+
+Pour le jeu de données, je l'ai réalisé à l'aide d'un script python [SCRIPT](Node.js/data/scriptMusic.py)
+
+Grâce à se script la réalisation des données est simple voici la commande pour avoir de nouvelles données si vous le
+souhaitez.
+
+Pré-requis
+
+```
+pip3 install faker
+```
+
+Pour le lancer depuis la racine du projet
+
+```
+pyhton3 Node.js/data/scriptMusic.py
+```
+
+Depuis le dossier data
+
+```
+pyhton3 scriptMusic.py
+```
+
+Le reste du serveur fonctionne toujours quand on change les données.
+
+This project leverages the mega-awesome [swagger-tools](https://github.com/apigee-127/swagger-tools) middleware which
+does most all the work.
