@@ -1,0 +1,2140 @@
+{
+  "producers": [
+    {
+      "id": "prod_1",
+      "name": "Rick Rubin",
+      "tracks": [
+        "track_1",
+        "track_6",
+        "track_11",
+        "track_16",
+        "track_21",
+        "track_26",
+        "track_31",
+        "track_36",
+        "track_41",
+        "track_46",
+        "track_51"
+      ]
+    },
+    {
+      "id": "prod_2",
+      "name": "Max Martin",
+      "tracks": [
+        "track_2",
+        "track_7",
+        "track_12",
+        "track_17",
+        "track_22",
+        "track_27",
+        "track_32",
+        "track_37",
+        "track_42",
+        "track_47",
+        "track_52"
+      ]
+    },
+    {
+      "id": "prod_3",
+      "name": "Pharrell Williams",
+      "tracks": [
+        "track_3",
+        "track_8",
+        "track_13",
+        "track_18",
+        "track_23",
+        "track_28",
+        "track_33",
+        "track_38",
+        "track_43",
+        "track_48",
+        "track_53"
+      ]
+    },
+    {
+      "id": "prod_4",
+      "name": "Jack Antonoff",
+      "tracks": [
+        "track_4",
+        "track_9",
+        "track_14",
+        "track_19",
+        "track_24",
+        "track_29",
+        "track_34",
+        "track_39",
+        "track_44",
+        "track_49",
+        "track_54"
+      ]
+    },
+    {
+      "id": "prod_5",
+      "name": "Mark Ronson",
+      "tracks": [
+        "track_5",
+        "track_10",
+        "track_15",
+        "track_20",
+        "track_25",
+        "track_30",
+        "track_35",
+        "track_40",
+        "track_45",
+        "track_50"
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "id": "art_1",
+      "name": "Taylor Swift",
+      "spotifyId": "spotify_001",
+      "country": "US",
+      "type": "solo"
+    },
+    {
+      "id": "art_2",
+      "name": "Ed Sheeran",
+      "spotifyId": "spotify_002",
+      "country": "UK",
+      "type": "solo"
+    },
+    {
+      "id": "art_3",
+      "name": "The Weeknd",
+      "spotifyId": "spotify_003",
+      "country": "CA",
+      "type": "solo"
+    },
+    {
+      "id": "art_4",
+      "name": "Imagine Dragons",
+      "spotifyId": "spotify_004",
+      "country": "US",
+      "type": "band"
+    },
+    {
+      "id": "art_5",
+      "name": "Dua Lipa",
+      "spotifyId": "spotify_005",
+      "country": "UK",
+      "type": "solo"
+    },
+    {
+      "id": "art_6",
+      "name": "Arctic Monkeys",
+      "spotifyId": "spotify_006",
+      "country": "UK",
+      "type": "band"
+    },
+    {
+      "id": "art_7",
+      "name": "Billie Eilish",
+      "spotifyId": "spotify_007",
+      "country": "US",
+      "type": "solo"
+    },
+    {
+      "id": "art_8",
+      "name": "Post Malone",
+      "spotifyId": "spotify_008",
+      "country": "US",
+      "type": "solo"
+    },
+    {
+      "id": "art_9",
+      "name": "Coldplay",
+      "spotifyId": "spotify_009",
+      "country": "UK",
+      "type": "band"
+    },
+    {
+      "id": "art_10",
+      "name": "Drake",
+      "spotifyId": "spotify_010",
+      "country": "CA",
+      "type": "solo"
+    }
+  ],
+  "albums": [
+    {
+      "id": "alb_1",
+      "title": "Love of Forest",
+      "releaseDate": "2023-09-18",
+      "totalTracks": 15,
+      "label": "OVO",
+      "distribution": "Sony",
+      "artistId": "art_1"
+    },
+    {
+      "id": "alb_2",
+      "title": "Shining Valley",
+      "releaseDate": "2022-06-25",
+      "totalTracks": 11,
+      "label": "Domino",
+      "distribution": "Independent",
+      "artistId": "art_1"
+    },
+    {
+      "id": "alb_3",
+      "title": "The Found Shadow",
+      "releaseDate": "2022-03-06",
+      "totalTracks": 12,
+      "label": "OVO",
+      "distribution": "Universal",
+      "artistId": "art_2"
+    },
+    {
+      "id": "alb_4",
+      "title": "The Dark Mind",
+      "releaseDate": "2020-11-18",
+      "totalTracks": 9,
+      "label": "Interscope",
+      "distribution": "Sony",
+      "artistId": "art_3"
+    },
+    {
+      "id": "alb_5",
+      "title": "Dance of Valley",
+      "releaseDate": "2021-12-15",
+      "totalTracks": 12,
+      "label": "Atlantic",
+      "distribution": "Universal",
+      "artistId": "art_4"
+    },
+    {
+      "id": "alb_6",
+      "title": "Heart of Street",
+      "releaseDate": "2023-10-16",
+      "totalTracks": 9,
+      "label": "Republic Records",
+      "distribution": "Independent",
+      "artistId": "art_4"
+    },
+    {
+      "id": "alb_7",
+      "title": "The Wild Fire",
+      "releaseDate": "2022-08-04",
+      "totalTracks": 14,
+      "label": "Interscope",
+      "distribution": "Sony",
+      "artistId": "art_5"
+    },
+    {
+      "id": "alb_8",
+      "title": "Eternal Dream",
+      "releaseDate": "2021-09-28",
+      "totalTracks": 13,
+      "label": "Republic Records",
+      "distribution": "Sony",
+      "artistId": "art_6"
+    },
+    {
+      "id": "alb_9",
+      "title": "Memory of Mountain",
+      "releaseDate": "2024-08-08",
+      "totalTracks": 15,
+      "label": "Interscope",
+      "distribution": "Sony",
+      "artistId": "art_7"
+    },
+    {
+      "id": "alb_10",
+      "title": "Soul of Desert",
+      "releaseDate": "2021-07-24",
+      "totalTracks": 14,
+      "label": "Darkroom",
+      "distribution": "Warner",
+      "artistId": "art_8"
+    },
+    {
+      "id": "alb_11",
+      "title": "Hope of River",
+      "releaseDate": "2024-02-22",
+      "totalTracks": 8,
+      "label": "Parlophone",
+      "distribution": "Independent",
+      "artistId": "art_8"
+    },
+    {
+      "id": "alb_12",
+      "title": "Crystal Star",
+      "releaseDate": "2023-06-10",
+      "totalTracks": 13,
+      "label": "Domino",
+      "distribution": "Universal",
+      "artistId": "art_9"
+    },
+    {
+      "id": "alb_13",
+      "title": "Sweet Heart",
+      "releaseDate": "2023-04-06",
+      "totalTracks": 9,
+      "label": "Republic Records",
+      "distribution": "Independent",
+      "artistId": "art_10"
+    },
+    {
+      "id": "alb_14",
+      "title": "Rising Street",
+      "releaseDate": "2022-11-04",
+      "totalTracks": 14,
+      "label": "Atlantic",
+      "distribution": "Sony",
+      "artistId": "art_10"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "track_1",
+      "title": "Star of Desert",
+      "isrc": "GI43493998",
+      "duration": "5:31",
+      "bpm": 172,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_8"
+      ],
+      "stats": {
+        "streams": 473895169,
+        "likes": 2290297,
+        "shares": 359003,
+        "downloads": 206187,
+        "peakPosition": 5,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "high",
+        "mood": "upbeat",
+        "instruments": [
+          "guitar",
+          "drums",
+          "808_bass",
+          "acoustic_guitar"
+        ],
+        "style": "dance-pop"
+      }
+    },
+    {
+      "id": "track_2",
+      "title": "Beautiful Paradise",
+      "isrc": "ES76902916",
+      "duration": "4:15",
+      "bpm": 161,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_1",
+        "art_2"
+      ],
+      "stats": {
+        "streams": 269954128,
+        "likes": 1948662,
+        "shares": 548199,
+        "downloads": 1434428,
+        "peakPosition": 13,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "C#",
+        "energyLevel": "low",
+        "mood": "nostalgic",
+        "instruments": [
+          "drums",
+          "electric_guitar",
+          "808_bass"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_3",
+      "title": "Dreaming Heaven",
+      "isrc": "ZM20663573",
+      "duration": "4:11",
+      "bpm": 174,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_1",
+      "mainArtistId": "art_1",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_7"
+      ],
+      "stats": {
+        "streams": 1312530190,
+        "likes": 1232112,
+        "shares": 238407,
+        "downloads": 1305926,
+        "peakPosition": 4,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "D",
+        "energyLevel": "low",
+        "mood": "peaceful",
+        "instruments": [
+          "synth",
+          "strings",
+          "piano",
+          "bass"
+        ],
+        "style": "electronic"
+      }
+    },
+    {
+      "id": "track_4",
+      "title": "Hope of World",
+      "isrc": "CN15667786",
+      "duration": "4:12",
+      "bpm": 107,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_2",
+      "mainArtistId": "art_1",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 101389079,
+        "likes": 1641055,
+        "shares": 766701,
+        "downloads": 1035783,
+        "peakPosition": 17,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "Gm",
+        "energyLevel": "medium",
+        "mood": "euphoric",
+        "instruments": [
+          "bass",
+          "piano",
+          "drums"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_5",
+      "title": "The Broken Spirit",
+      "isrc": "GQ10045424",
+      "duration": "5:11",
+      "bpm": 162,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_2",
+      "mainArtistId": "art_1",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1918295741,
+        "likes": 596211,
+        "shares": 497776,
+        "downloads": 1034890,
+        "peakPosition": 4,
+        "weeklyTrend": "+8%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "medium",
+        "mood": "peaceful",
+        "instruments": [
+          "synth",
+          "piano",
+          "electric_guitar",
+          "strings"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_6",
+      "title": "Divine Shadow",
+      "isrc": "XM77868140",
+      "duration": "3:51",
+      "bpm": 77,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_2",
+      "mainArtistId": "art_1",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_6"
+      ],
+      "stats": {
+        "streams": 2500036785,
+        "likes": 965817,
+        "shares": 551726,
+        "downloads": 369118,
+        "peakPosition": 3,
+        "weeklyTrend": "-7%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "medium",
+        "mood": "romantic",
+        "instruments": [
+          "strings",
+          "drums",
+          "electric_guitar",
+          "synth"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_7",
+      "title": "Love of Paradise",
+      "isrc": "XZ19641129",
+      "duration": "3:27",
+      "bpm": 103,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_3",
+      "mainArtistId": "art_2",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_10"
+      ],
+      "stats": {
+        "streams": 44585335,
+        "likes": 3309400,
+        "shares": 269473,
+        "downloads": 937635,
+        "peakPosition": 7,
+        "weeklyTrend": "-2%"
+      },
+      "musicalInfo": {
+        "key": "F#",
+        "energyLevel": "low",
+        "mood": "peaceful",
+        "instruments": [
+          "synth",
+          "piano",
+          "acoustic_guitar"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_8",
+      "title": "Sacred Spirit",
+      "isrc": "HM62775096",
+      "duration": "4:22",
+      "bpm": 129,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_3",
+      "mainArtistId": "art_2",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_6",
+        "art_10"
+      ],
+      "stats": {
+        "streams": 2211375421,
+        "likes": 4918084,
+        "shares": 710220,
+        "downloads": 980288,
+        "peakPosition": 5,
+        "weeklyTrend": "-5%"
+      },
+      "musicalInfo": {
+        "key": "C#",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "bass",
+          "synth",
+          "piano"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_9",
+      "title": "The Lost Light",
+      "isrc": "OH58213607",
+      "duration": "4:43",
+      "bpm": 166,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_3",
+      "mainArtistId": "art_2",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_6"
+      ],
+      "stats": {
+        "streams": 443703782,
+        "likes": 2695596,
+        "shares": 897632,
+        "downloads": 600451,
+        "peakPosition": 18,
+        "weeklyTrend": "-5%"
+      },
+      "musicalInfo": {
+        "key": "B",
+        "energyLevel": "high",
+        "mood": "angry",
+        "instruments": [
+          "drums",
+          "piano",
+          "guitar",
+          "electric_guitar"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_10",
+      "title": "Shining Mountain",
+      "isrc": "FJ69313446",
+      "duration": "5:37",
+      "bpm": 127,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_4",
+      "mainArtistId": "art_3",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_7"
+      ],
+      "stats": {
+        "streams": 2225026357,
+        "likes": 2834159,
+        "shares": 709778,
+        "downloads": 1200590,
+        "peakPosition": 3,
+        "weeklyTrend": "-3%"
+      },
+      "musicalInfo": {
+        "key": "Cm",
+        "energyLevel": "high",
+        "mood": "peaceful",
+        "instruments": [
+          "strings",
+          "acoustic_guitar",
+          "bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_11",
+      "title": "The Crystal Memory",
+      "isrc": "QV11976661",
+      "duration": "2:56",
+      "bpm": 91,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_4",
+      "mainArtistId": "art_3",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_6"
+      ],
+      "stats": {
+        "streams": 180486081,
+        "likes": 2168989,
+        "shares": 500411,
+        "downloads": 530750,
+        "peakPosition": 11,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "Bm",
+        "energyLevel": "low",
+        "mood": "dreamy",
+        "instruments": [
+          "electric_guitar",
+          "drums",
+          "808_bass",
+          "bass"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_12",
+      "title": "The Found Sky",
+      "isrc": "LR81139096",
+      "duration": "3:25",
+      "bpm": 187,
+      "language": "en",
+      "releaseYear": 2023,
+      "albumId": "alb_4",
+      "mainArtistId": "art_3",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_10",
+        "art_5"
+      ],
+      "stats": {
+        "streams": 1652291741,
+        "likes": 2225407,
+        "shares": 774950,
+        "downloads": 212303,
+        "peakPosition": 15,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "F#",
+        "energyLevel": "high",
+        "mood": "peaceful",
+        "instruments": [
+          "bass",
+          "guitar",
+          "synth",
+          "808_bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_13",
+      "title": "Dark Hope",
+      "isrc": "OI60368273",
+      "duration": "5:29",
+      "bpm": 86,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_4",
+      "mainArtistId": "art_3",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_8",
+        "art_2"
+      ],
+      "stats": {
+        "streams": 330610770,
+        "likes": 794617,
+        "shares": 909483,
+        "downloads": 720212,
+        "peakPosition": 16,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "E",
+        "energyLevel": "medium",
+        "mood": "dreamy",
+        "instruments": [
+          "bass",
+          "drums",
+          "strings"
+        ],
+        "style": "dance-pop"
+      }
+    },
+    {
+      "id": "track_14",
+      "title": "Night of World",
+      "isrc": "ZN89930516",
+      "duration": "2:36",
+      "bpm": 124,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_5",
+      "mainArtistId": "art_4",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_9",
+        "art_6"
+      ],
+      "stats": {
+        "streams": 2841319322,
+        "likes": 2537096,
+        "shares": 572607,
+        "downloads": 1251616,
+        "peakPosition": 6,
+        "weeklyTrend": "+8%"
+      },
+      "musicalInfo": {
+        "key": "G",
+        "energyLevel": "high",
+        "mood": "upbeat",
+        "instruments": [
+          "808_bass",
+          "piano",
+          "drums"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_15",
+      "title": "Soul of Heaven",
+      "isrc": "KN70893263",
+      "duration": "3:24",
+      "bpm": 162,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_5",
+      "mainArtistId": "art_4",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_2",
+        "art_7"
+      ],
+      "stats": {
+        "streams": 2740003761,
+        "likes": 4173306,
+        "shares": 680647,
+        "downloads": 225679,
+        "peakPosition": 16,
+        "weeklyTrend": "-6%"
+      },
+      "musicalInfo": {
+        "key": "C#",
+        "energyLevel": "medium",
+        "mood": "melancholic",
+        "instruments": [
+          "strings",
+          "synth",
+          "piano",
+          "drums"
+        ],
+        "style": "indie"
+      }
+    },
+    {
+      "id": "track_16",
+      "title": "Paradise of River",
+      "isrc": "JK43957240",
+      "duration": "2:13",
+      "bpm": 170,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_5",
+      "mainArtistId": "art_4",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_6",
+        "art_3"
+      ],
+      "stats": {
+        "streams": 449014355,
+        "likes": 2210675,
+        "shares": 192172,
+        "downloads": 851663,
+        "peakPosition": 5,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "D",
+        "energyLevel": "low",
+        "mood": "dreamy",
+        "instruments": [
+          "synth",
+          "piano",
+          "bass"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_17",
+      "title": "Dream of Forest",
+      "isrc": "HL52512821",
+      "duration": "5:17",
+      "bpm": 149,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_6",
+      "mainArtistId": "art_4",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_6",
+        "art_10"
+      ],
+      "stats": {
+        "streams": 1660741957,
+        "likes": 2670777,
+        "shares": 514003,
+        "downloads": 218064,
+        "peakPosition": 4,
+        "weeklyTrend": "+4%"
+      },
+      "musicalInfo": {
+        "key": "Bbm",
+        "energyLevel": "high",
+        "mood": "dark",
+        "instruments": [
+          "acoustic_guitar",
+          "piano",
+          "808_bass"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_18",
+      "title": "Endless Fire",
+      "isrc": "TF22940159",
+      "duration": "4:23",
+      "bpm": 65,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_6",
+      "mainArtistId": "art_4",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_2",
+        "art_10"
+      ],
+      "stats": {
+        "streams": 550488502,
+        "likes": 980632,
+        "shares": 717424,
+        "downloads": 1466058,
+        "peakPosition": 14,
+        "weeklyTrend": "-7%"
+      },
+      "musicalInfo": {
+        "key": "A",
+        "energyLevel": "high",
+        "mood": "chill",
+        "instruments": [
+          "808_bass",
+          "strings",
+          "bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_19",
+      "title": "The Found Heaven",
+      "isrc": "YD43498673",
+      "duration": "2:22",
+      "bpm": 130,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_6",
+      "mainArtistId": "art_4",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_5",
+        "art_3"
+      ],
+      "stats": {
+        "streams": 750805583,
+        "likes": 1077059,
+        "shares": 549080,
+        "downloads": 1143105,
+        "peakPosition": 4,
+        "weeklyTrend": "-8%"
+      },
+      "musicalInfo": {
+        "key": "Cm",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "piano",
+          "808_bass",
+          "electric_guitar",
+          "guitar"
+        ],
+        "style": "pop-rock"
+      }
+    },
+    {
+      "id": "track_20",
+      "title": "Wild Hope",
+      "isrc": "RX73667095",
+      "duration": "4:28",
+      "bpm": 161,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_6",
+      "mainArtistId": "art_4",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 462196274,
+        "likes": 3765778,
+        "shares": 283249,
+        "downloads": 844819,
+        "peakPosition": 7,
+        "weeklyTrend": "-2%"
+      },
+      "musicalInfo": {
+        "key": "Bbm",
+        "energyLevel": "medium",
+        "mood": "dreamy",
+        "instruments": [
+          "strings",
+          "acoustic_guitar",
+          "synth",
+          "drums"
+        ],
+        "style": "electronic"
+      }
+    },
+    {
+      "id": "track_21",
+      "title": "Beautiful Memory",
+      "isrc": "TM95906253",
+      "duration": "2:20",
+      "bpm": 75,
+      "language": "en",
+      "releaseYear": 2023,
+      "albumId": "alb_7",
+      "mainArtistId": "art_5",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_10"
+      ],
+      "stats": {
+        "streams": 995729486,
+        "likes": 3905439,
+        "shares": 643369,
+        "downloads": 286551,
+        "peakPosition": 4,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "high",
+        "mood": "euphoric",
+        "instruments": [
+          "synth",
+          "electric_guitar",
+          "drums"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_22",
+      "title": "Time of Paradise",
+      "isrc": "JI80209902",
+      "duration": "4:53",
+      "bpm": 62,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_7",
+      "mainArtistId": "art_5",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_3"
+      ],
+      "stats": {
+        "streams": 1659338818,
+        "likes": 1576804,
+        "shares": 551020,
+        "downloads": 373876,
+        "peakPosition": 10,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "F#",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "acoustic_guitar",
+          "electric_guitar",
+          "drums"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_23",
+      "title": "Beautiful Power",
+      "isrc": "NV80221692",
+      "duration": "4:28",
+      "bpm": 82,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_7",
+      "mainArtistId": "art_5",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 770773683,
+        "likes": 947478,
+        "shares": 499836,
+        "downloads": 621625,
+        "peakPosition": 4,
+        "weeklyTrend": "-8%"
+      },
+      "musicalInfo": {
+        "key": "C#",
+        "energyLevel": "high",
+        "mood": "chill",
+        "instruments": [
+          "808_bass",
+          "synth",
+          "electric_guitar"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_24",
+      "title": "Singing Desert",
+      "isrc": "EG67141563",
+      "duration": "4:15",
+      "bpm": 85,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_7",
+      "mainArtistId": "art_5",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 2759517248,
+        "likes": 2621011,
+        "shares": 118152,
+        "downloads": 1402564,
+        "peakPosition": 2,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "Em",
+        "energyLevel": "high",
+        "mood": "angry",
+        "instruments": [
+          "808_bass",
+          "synth",
+          "acoustic_guitar",
+          "drums"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_25",
+      "title": "The Sacred Night",
+      "isrc": "VR41124372",
+      "duration": "3:46",
+      "bpm": 123,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_7",
+      "mainArtistId": "art_5",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_4"
+      ],
+      "stats": {
+        "streams": 1627827410,
+        "likes": 2527680,
+        "shares": 210934,
+        "downloads": 812059,
+        "peakPosition": 11,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "medium",
+        "mood": "romantic",
+        "instruments": [
+          "electric_guitar",
+          "piano",
+          "synth",
+          "strings"
+        ],
+        "style": "disco-pop"
+      }
+    },
+    {
+      "id": "track_26",
+      "title": "Power of City",
+      "isrc": "BW19293754",
+      "duration": "3:22",
+      "bpm": 90,
+      "language": "en",
+      "releaseYear": 2024,
+      "albumId": "alb_8",
+      "mainArtistId": "art_6",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_4"
+      ],
+      "stats": {
+        "streams": 1082652734,
+        "likes": 4936121,
+        "shares": 970504,
+        "downloads": 1033466,
+        "peakPosition": 2,
+        "weeklyTrend": "-5%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "high",
+        "mood": "nostalgic",
+        "instruments": [
+          "bass",
+          "808_bass",
+          "guitar"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_27",
+      "title": "The Perfect Night",
+      "isrc": "QR36022694",
+      "duration": "4:55",
+      "bpm": 103,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_8",
+      "mainArtistId": "art_6",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_5"
+      ],
+      "stats": {
+        "streams": 2609110324,
+        "likes": 1501218,
+        "shares": 419781,
+        "downloads": 1404862,
+        "peakPosition": 3,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "Cm",
+        "energyLevel": "low",
+        "mood": "energetic",
+        "instruments": [
+          "drums",
+          "piano",
+          "808_bass",
+          "acoustic_guitar"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_28",
+      "title": "The Sacred Faith",
+      "isrc": "TO92615279",
+      "duration": "3:30",
+      "bpm": 97,
+      "language": "en",
+      "releaseYear": 2024,
+      "albumId": "alb_8",
+      "mainArtistId": "art_6",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_4",
+        "art_1"
+      ],
+      "stats": {
+        "streams": 1345308871,
+        "likes": 3573519,
+        "shares": 451278,
+        "downloads": 1370618,
+        "peakPosition": 8,
+        "weeklyTrend": "-3%"
+      },
+      "musicalInfo": {
+        "key": "E",
+        "energyLevel": "medium",
+        "mood": "peaceful",
+        "instruments": [
+          "strings",
+          "piano",
+          "synth",
+          "drums"
+        ],
+        "style": "indie"
+      }
+    },
+    {
+      "id": "track_29",
+      "title": "Star of Ocean",
+      "isrc": "CO97095613",
+      "duration": "2:39",
+      "bpm": 104,
+      "language": "en",
+      "releaseYear": 2023,
+      "albumId": "alb_8",
+      "mainArtistId": "art_6",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_2",
+        "art_6"
+      ],
+      "stats": {
+        "streams": 1761944414,
+        "likes": 3777966,
+        "shares": 253803,
+        "downloads": 1453191,
+        "peakPosition": 19,
+        "weeklyTrend": "-6%"
+      },
+      "musicalInfo": {
+        "key": "Bbm",
+        "energyLevel": "low",
+        "mood": "upbeat",
+        "instruments": [
+          "drums",
+          "piano",
+          "electric_guitar"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_30",
+      "title": "Dreaming Forest",
+      "isrc": "ZK13474773",
+      "duration": "4:11",
+      "bpm": 128,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_8",
+      "mainArtistId": "art_6",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_1"
+      ],
+      "stats": {
+        "streams": 796305492,
+        "likes": 1058741,
+        "shares": 663221,
+        "downloads": 623877,
+        "peakPosition": 17,
+        "weeklyTrend": "+8%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "low",
+        "mood": "peaceful",
+        "instruments": [
+          "piano",
+          "acoustic_guitar",
+          "bass",
+          "strings"
+        ],
+        "style": "dark-pop"
+      }
+    },
+    {
+      "id": "track_31",
+      "title": "Waiting Paradise",
+      "isrc": "AY98901061",
+      "duration": "4:48",
+      "bpm": 80,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_9",
+      "mainArtistId": "art_7",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 129326927,
+        "likes": 3676275,
+        "shares": 822241,
+        "downloads": 977525,
+        "peakPosition": 16,
+        "weeklyTrend": "+3%"
+      },
+      "musicalInfo": {
+        "key": "B",
+        "energyLevel": "low",
+        "mood": "euphoric",
+        "instruments": [
+          "synth",
+          "drums",
+          "electric_guitar"
+        ],
+        "style": "electronic"
+      }
+    },
+    {
+      "id": "track_32",
+      "title": "Singing World",
+      "isrc": "JD10224163",
+      "duration": "3:12",
+      "bpm": 94,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_9",
+      "mainArtistId": "art_7",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_8",
+        "art_2"
+      ],
+      "stats": {
+        "streams": 2088955338,
+        "likes": 1203722,
+        "shares": 607520,
+        "downloads": 1450201,
+        "peakPosition": 17,
+        "weeklyTrend": "-6%"
+      },
+      "musicalInfo": {
+        "key": "Bm",
+        "energyLevel": "low",
+        "mood": "melancholic",
+        "instruments": [
+          "bass",
+          "piano",
+          "electric_guitar",
+          "synth"
+        ],
+        "style": "indie"
+      }
+    },
+    {
+      "id": "track_33",
+      "title": "Beautiful Dance",
+      "isrc": "IV28201551",
+      "duration": "5:16",
+      "bpm": 182,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_9",
+      "mainArtistId": "art_7",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 396400269,
+        "likes": 2039019,
+        "shares": 752888,
+        "downloads": 1116523,
+        "peakPosition": 19,
+        "weeklyTrend": "+8%"
+      },
+      "musicalInfo": {
+        "key": "G",
+        "energyLevel": "low",
+        "mood": "dark",
+        "instruments": [
+          "guitar",
+          "drums",
+          "bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_34",
+      "title": "Flying Ocean",
+      "isrc": "BH80847044",
+      "duration": "2:55",
+      "bpm": 137,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_10",
+      "mainArtistId": "art_8",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1241896721,
+        "likes": 2248284,
+        "shares": 716737,
+        "downloads": 763836,
+        "peakPosition": 16,
+        "weeklyTrend": "+1%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "low",
+        "mood": "melancholic",
+        "instruments": [
+          "bass",
+          "synth",
+          "strings",
+          "guitar"
+        ],
+        "style": "electropop"
+      }
+    },
+    {
+      "id": "track_35",
+      "title": "Mystic Heart",
+      "isrc": "RZ57252478",
+      "duration": "3:48",
+      "bpm": 92,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_10",
+      "mainArtistId": "art_8",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 758250017,
+        "likes": 4875533,
+        "shares": 797772,
+        "downloads": 541655,
+        "peakPosition": 3,
+        "weeklyTrend": "-8%"
+      },
+      "musicalInfo": {
+        "key": "Dm",
+        "energyLevel": "low",
+        "mood": "dark",
+        "instruments": [
+          "drums",
+          "guitar",
+          "acoustic_guitar"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_36",
+      "title": "Perfect Dance",
+      "isrc": "HR84950811",
+      "duration": "3:46",
+      "bpm": 137,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_10",
+      "mainArtistId": "art_8",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_10",
+        "art_1"
+      ],
+      "stats": {
+        "streams": 2740284499,
+        "likes": 3233994,
+        "shares": 717594,
+        "downloads": 1279579,
+        "peakPosition": 2,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "C#",
+        "energyLevel": "low",
+        "mood": "angry",
+        "instruments": [
+          "synth",
+          "acoustic_guitar",
+          "strings",
+          "808_bass"
+        ],
+        "style": "r&b"
+      }
+    },
+    {
+      "id": "track_37",
+      "title": "Rain of River",
+      "isrc": "PD96888906",
+      "duration": "5:35",
+      "bpm": 62,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_10",
+      "mainArtistId": "art_8",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_10"
+      ],
+      "stats": {
+        "streams": 460081947,
+        "likes": 1314854,
+        "shares": 678369,
+        "downloads": 276193,
+        "peakPosition": 18,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "medium",
+        "mood": "angry",
+        "instruments": [
+          "bass",
+          "synth",
+          "acoustic_guitar",
+          "guitar"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_38",
+      "title": "The Bright Faith",
+      "isrc": "NP94301803",
+      "duration": "2:31",
+      "bpm": 102,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_10",
+      "mainArtistId": "art_8",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1889161650,
+        "likes": 4566067,
+        "shares": 319808,
+        "downloads": 500460,
+        "peakPosition": 11,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "medium",
+        "mood": "upbeat",
+        "instruments": [
+          "piano",
+          "strings",
+          "bass"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_39",
+      "title": "Running River",
+      "isrc": "EN44203309",
+      "duration": "2:16",
+      "bpm": 133,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_11",
+      "mainArtistId": "art_8",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_2",
+        "art_1"
+      ],
+      "stats": {
+        "streams": 1279546417,
+        "likes": 4414133,
+        "shares": 835059,
+        "downloads": 1085657,
+        "peakPosition": 1,
+        "weeklyTrend": "-7%"
+      },
+      "musicalInfo": {
+        "key": "Dm",
+        "energyLevel": "medium",
+        "mood": "upbeat",
+        "instruments": [
+          "acoustic_guitar",
+          "strings",
+          "piano"
+        ],
+        "style": "synthpop"
+      }
+    },
+    {
+      "id": "track_40",
+      "title": "Falling Ocean",
+      "isrc": "LW96051626",
+      "duration": "4:52",
+      "bpm": 155,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_11",
+      "mainArtistId": "art_8",
+      "producerId": "prod_5",
+      "featuredArtists": [
+        "art_10"
+      ],
+      "stats": {
+        "streams": 111034701,
+        "likes": 510526,
+        "shares": 459456,
+        "downloads": 516694,
+        "peakPosition": 2,
+        "weeklyTrend": "-6%"
+      },
+      "musicalInfo": {
+        "key": "D",
+        "energyLevel": "high",
+        "mood": "emotional",
+        "instruments": [
+          "strings",
+          "guitar",
+          "808_bass"
+        ],
+        "style": "r&b"
+      }
+    },
+    {
+      "id": "track_41",
+      "title": "The Lost Faith",
+      "isrc": "BD14720934",
+      "duration": "2:26",
+      "bpm": 71,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_11",
+      "mainArtistId": "art_8",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_3",
+        "art_10"
+      ],
+      "stats": {
+        "streams": 742560444,
+        "likes": 3518858,
+        "shares": 502857,
+        "downloads": 1111470,
+        "peakPosition": 4,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "G",
+        "energyLevel": "high",
+        "mood": "energetic",
+        "instruments": [
+          "acoustic_guitar",
+          "drums",
+          "piano"
+        ],
+        "style": "pop"
+      }
+    },
+    {
+      "id": "track_42",
+      "title": "Shining Forest",
+      "isrc": "WG72308444",
+      "duration": "3:31",
+      "bpm": 104,
+      "language": "en",
+      "releaseYear": 2019,
+      "albumId": "alb_12",
+      "mainArtistId": "art_9",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 2850115065,
+        "likes": 4798687,
+        "shares": 653645,
+        "downloads": 1110939,
+        "peakPosition": 5,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "Cm",
+        "energyLevel": "low",
+        "mood": "dark",
+        "instruments": [
+          "guitar",
+          "drums",
+          "piano",
+          "acoustic_guitar"
+        ],
+        "style": "dance-pop"
+      }
+    },
+    {
+      "id": "track_43",
+      "title": "The Beautiful Memory",
+      "isrc": "XW33610969",
+      "duration": "4:38",
+      "bpm": 155,
+      "language": "en",
+      "releaseYear": 2018,
+      "albumId": "alb_12",
+      "mainArtistId": "art_9",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_6",
+        "art_7"
+      ],
+      "stats": {
+        "streams": 34818962,
+        "likes": 3631105,
+        "shares": 927224,
+        "downloads": 1328346,
+        "peakPosition": 19,
+        "weeklyTrend": "+5%"
+      },
+      "musicalInfo": {
+        "key": "Bm",
+        "energyLevel": "medium",
+        "mood": "chill",
+        "instruments": [
+          "electric_guitar",
+          "bass",
+          "drums"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_44",
+      "title": "The Eternal Faith",
+      "isrc": "BX67141561",
+      "duration": "2:12",
+      "bpm": 164,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_12",
+      "mainArtistId": "art_9",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_2"
+      ],
+      "stats": {
+        "streams": 1275036914,
+        "likes": 2593368,
+        "shares": 428142,
+        "downloads": 316768,
+        "peakPosition": 11,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "Dm",
+        "energyLevel": "high",
+        "mood": "emotional",
+        "instruments": [
+          "acoustic_guitar",
+          "bass",
+          "strings",
+          "electric_guitar"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_45",
+      "title": "Dancing City",
+      "isrc": "CR94912461",
+      "duration": "5:41",
+      "bpm": 78,
+      "language": "en",
+      "releaseYear": 2024,
+      "albumId": "alb_12",
+      "mainArtistId": "art_9",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 425327591,
+        "likes": 934029,
+        "shares": 998779,
+        "downloads": 1098687,
+        "peakPosition": 6,
+        "weeklyTrend": "-3%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "high",
+        "mood": "peaceful",
+        "instruments": [
+          "synth",
+          "guitar",
+          "strings",
+          "electric_guitar"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_46",
+      "title": "The Eternal Memory",
+      "isrc": "CL82540523",
+      "duration": "5:51",
+      "bpm": 132,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_13",
+      "mainArtistId": "art_10",
+      "producerId": "prod_1",
+      "featuredArtists": [
+        "art_6",
+        "art_10"
+      ],
+      "stats": {
+        "streams": 2309136484,
+        "likes": 610751,
+        "shares": 459993,
+        "downloads": 1086113,
+        "peakPosition": 8,
+        "weeklyTrend": "-8%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "medium",
+        "mood": "euphoric",
+        "instruments": [
+          "strings",
+          "guitar",
+          "808_bass"
+        ],
+        "style": "dark-pop"
+      }
+    },
+    {
+      "id": "track_47",
+      "title": "Electric Star",
+      "isrc": "RM88380773",
+      "duration": "3:25",
+      "bpm": 154,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_13",
+      "mainArtistId": "art_10",
+      "producerId": "prod_2",
+      "featuredArtists": [
+        "art_1",
+        "art_6"
+      ],
+      "stats": {
+        "streams": 828902118,
+        "likes": 1741819,
+        "shares": 446637,
+        "downloads": 208514,
+        "peakPosition": 14,
+        "weeklyTrend": "-6%"
+      },
+      "musicalInfo": {
+        "key": "C",
+        "energyLevel": "medium",
+        "mood": "dreamy",
+        "instruments": [
+          "strings",
+          "drums",
+          "synth",
+          "808_bass"
+        ],
+        "style": "dark-pop"
+      }
+    },
+    {
+      "id": "track_48",
+      "title": "The Crystal Night",
+      "isrc": "VB33109979",
+      "duration": "3:56",
+      "bpm": 73,
+      "language": "en",
+      "releaseYear": 2024,
+      "albumId": "alb_13",
+      "mainArtistId": "art_10",
+      "producerId": "prod_3",
+      "featuredArtists": [
+        "art_10",
+        "art_9"
+      ],
+      "stats": {
+        "streams": 2384216242,
+        "likes": 945808,
+        "shares": 454579,
+        "downloads": 499461,
+        "peakPosition": 6,
+        "weeklyTrend": "-4%"
+      },
+      "musicalInfo": {
+        "key": "Dm",
+        "energyLevel": "medium",
+        "mood": "dreamy",
+        "instruments": [
+          "strings",
+          "drums",
+          "808_bass",
+          "acoustic_guitar"
+        ],
+        "style": "r&b"
+      }
+    },
+    {
+      "id": "track_49",
+      "title": "Broken Fire",
+      "isrc": "UV29149419",
+      "duration": "3:19",
+      "bpm": 151,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_13",
+      "mainArtistId": "art_10",
+      "producerId": "prod_4",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1491133391,
+        "likes": 1613731,
+        "shares": 774947,
+        "downloads": 1489270,
+        "peakPosition": 10,
+        "weeklyTrend": "-3%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "low",
+        "mood": "nostalgic",
+        "instruments": [
+          "strings",
+          "bass",
+          "electric_guitar",
+          "piano"
+        ],
+        "style": "indie"
+      }
+    },
+    {
+      "id": "track_50",
+      "title": "Dreaming River",
+      "isrc": "PX62981385",
+      "duration": "3:32",
+      "bpm": 124,
+      "language": "en",
+      "releaseYear": 2024,
+      "albumId": "alb_14",
+      "mainArtistId": "art_10",
+      "producerId": "prod_5",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1875380929,
+        "likes": 3934664,
+        "shares": 199269,
+        "downloads": 1034646,
+        "peakPosition": 12,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "medium",
+        "mood": "dark",
+        "instruments": [
+          "acoustic_guitar",
+          "synth",
+          "electric_guitar"
+        ],
+        "style": "rock"
+      }
+    },
+    {
+      "id": "track_51",
+      "title": "The Crystal Dance",
+      "isrc": "GJ73150288",
+      "duration": "5:23",
+      "bpm": 91,
+      "language": "en",
+      "releaseYear": 2021,
+      "albumId": "alb_14",
+      "mainArtistId": "art_10",
+      "producerId": "prod_1",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 2553735509,
+        "likes": 4653071,
+        "shares": 921053,
+        "downloads": 1420221,
+        "peakPosition": 8,
+        "weeklyTrend": "+6%"
+      },
+      "musicalInfo": {
+        "key": "Am",
+        "energyLevel": "high",
+        "mood": "melancholic",
+        "instruments": [
+          "guitar",
+          "acoustic_guitar",
+          "808_bass"
+        ],
+        "style": "r&b"
+      }
+    },
+    {
+      "id": "track_52",
+      "title": "The Sweet Dance",
+      "isrc": "UP50765882",
+      "duration": "4:39",
+      "bpm": 168,
+      "language": "en",
+      "releaseYear": 2020,
+      "albumId": "alb_14",
+      "mainArtistId": "art_10",
+      "producerId": "prod_2",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1641203824,
+        "likes": 4046935,
+        "shares": 212857,
+        "downloads": 844524,
+        "peakPosition": 11,
+        "weeklyTrend": "+2%"
+      },
+      "musicalInfo": {
+        "key": "A",
+        "energyLevel": "medium",
+        "mood": "emotional",
+        "instruments": [
+          "guitar",
+          "synth",
+          "piano"
+        ],
+        "style": "dance-pop"
+      }
+    },
+    {
+      "id": "track_53",
+      "title": "The Divine Life",
+      "isrc": "MD85840419",
+      "duration": "4:15",
+      "bpm": 180,
+      "language": "en",
+      "releaseYear": 2023,
+      "albumId": "alb_14",
+      "mainArtistId": "art_10",
+      "producerId": "prod_3",
+      "featuredArtists": [],
+      "stats": {
+        "streams": 1647235081,
+        "likes": 3066753,
+        "shares": 561488,
+        "downloads": 914140,
+        "peakPosition": 20,
+        "weeklyTrend": "+3%"
+      },
+      "musicalInfo": {
+        "key": "F#m",
+        "energyLevel": "high",
+        "mood": "dark",
+        "instruments": [
+          "guitar",
+          "acoustic_guitar",
+          "electric_guitar",
+          "synth"
+        ],
+        "style": "hip-hop"
+      }
+    },
+    {
+      "id": "track_54",
+      "title": "Waiting World",
+      "isrc": "SX10464820",
+      "duration": "2:31",
+      "bpm": 162,
+      "language": "en",
+      "releaseYear": 2022,
+      "albumId": "alb_14",
+      "mainArtistId": "art_10",
+      "producerId": "prod_4",
+      "featuredArtists": [
+        "art_1",
+        "art_9"
+      ],
+      "stats": {
+        "streams": 1657771305,
+        "likes": 3392339,
+        "shares": 270487,
+        "downloads": 222849,
+        "peakPosition": 15,
+        "weeklyTrend": "-1%"
+      },
+      "musicalInfo": {
+        "key": "Bm",
+        "energyLevel": "low",
+        "mood": "chill",
+        "instruments": [
+          "strings",
+          "acoustic_guitar",
+          "piano",
+          "electric_guitar"
+        ],
+        "style": "electronic"
+      }
+    }
+  ]
+}

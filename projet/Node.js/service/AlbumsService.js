@@ -1,6 +1,6 @@
 'use strict';
 
-const data = require('../data/donnees.json');
+const data = require('../data/music_data.json');
 
 exports.albumsGET = function (limit, offset) {
     return new Promise(function (resolve, reject) {
