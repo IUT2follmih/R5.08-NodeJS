@@ -80,6 +80,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Track'
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Track not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Tracks
     put:
       tags:
@@ -477,6 +499,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MusicalInfo'
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Track or musical info not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Tracks
   /tracks/{id}/stats:
     get:
@@ -499,6 +543,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Stats'
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Track or stats not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Tracks
   /artists/{id}/tracks:
     get:
@@ -596,6 +662,8 @@ paths:
           explode: false
           schema:
             type: string
+            enum: [ dance-pop, hip-hop, electronic, electropop, pop-rock, synthpop, pop, rock, indie, disco-pop, dark-pop, r&b ]
+            description: Style musical de la track
         - name: limit
           in: query
           required: false
@@ -622,6 +690,28 @@ paths:
                 items:
                   $ref: '#/components/schemas/Track'
                 x-content-type: application/json
+        "400":
+          description: Invalid parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: No tracks found for this style
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Tracks
   /albums/{id}/tracks:
     get:
