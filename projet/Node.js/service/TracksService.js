@@ -20,7 +20,7 @@ exports.tracksIdGET = function (id) {
             if (!id || typeof id !== 'string' || !id.trim()) {
                 reject({
                     code: 400,
-                    message: 'ID invalide : l\'ID doit être une chaîne de caractères non vide'
+                    message: 'Invalid ID: ID must be a non-empty string'
                 });
                 return;
             }
@@ -29,7 +29,7 @@ exports.tracksIdGET = function (id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Format d\'ID invalide : l\'ID doit être au format "track_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "album_NUMBER"'
                 });
                 return;
             }
@@ -39,7 +39,7 @@ exports.tracksIdGET = function (id) {
             if (!track) {
                 reject({
                     code: 404,
-                    message: `Track avec l'ID ${id} non trouvée`
+                    message: `Track with ID ${id} not found`
                 });
                 return;
             }
@@ -48,7 +48,7 @@ exports.tracksIdGET = function (id) {
         } catch (error) {
             reject({
                 code: 500,
-                message: 'Erreur interne du serveur',
+                message: 'Internal server error',
                 error: error.message
             });
         }
@@ -76,7 +76,7 @@ exports.tracksByStyleGET = function (style, limit = 20, offset = 0) {
             if (!style || typeof style !== 'string' || !style.trim()) {
                 reject({
                     code: 400,
-                    message: 'Style invalide : le style doit être une chaîne de caractères non vide'
+                    message: 'Invalid style: style must be a non-empty string'
                 });
                 return;
             }
@@ -85,7 +85,7 @@ exports.tracksByStyleGET = function (style, limit = 20, offset = 0) {
             if (!VALID_STYLES.includes(normalizedStyle)) {
                 reject({
                     code: 400,
-                    message: `Style invalide : "${style}". Les styles disponibles sont : ${VALID_STYLES.join(', ')}`
+                    message: `Invalid style: "${style}". Valid styles are: ${VALID_STYLES.join(', ')}`
                 });
                 return;
             }
@@ -96,7 +96,7 @@ exports.tracksByStyleGET = function (style, limit = 20, offset = 0) {
             if (filteredTracks.length === 0) {
                 reject({
                     code: 404,
-                    message: `Aucune track trouvée pour le style "${style}"`
+                    message: `No track found for style "${style}"`
                 });
                 return;
             }
@@ -108,7 +108,7 @@ exports.tracksByStyleGET = function (style, limit = 20, offset = 0) {
         } catch (error) {
             reject({
                 code: 500,
-                message: 'Erreur interne du serveur',
+                message: 'Internal server error',
                 error: error.message
             });
         }
@@ -121,7 +121,7 @@ exports.tracksIdStatsGET = function (id) {
             if (!id || typeof id !== 'string' || !id.trim()) {
                 reject({
                     code: 400,
-                    message: 'ID invalide : l\'ID doit être une chaîne de caractères non vide'
+                    message: 'Invalid ID: ID must be a non-empty string'
                 });
                 return;
             }
@@ -130,7 +130,7 @@ exports.tracksIdStatsGET = function (id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Format d\'ID invalide : l\'ID doit être au format "track_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "track_NUMBER"'
                 });
                 return;
             }
@@ -139,7 +139,7 @@ exports.tracksIdStatsGET = function (id) {
             if (!track) {
                 reject({
                     code: 404,
-                    message: `Track avec l'ID ${id} non trouvée`
+                    message: `Track with ID ${id} not found`
                 });
                 return;
             }
@@ -147,7 +147,7 @@ exports.tracksIdStatsGET = function (id) {
             if (!track.stats) {
                 reject({
                     code: 404,
-                    message: `Statistiques non trouvées pour la track ${id}`
+                    message: `Stats not found for track ${id}`
                 });
                 return;
             }
@@ -156,7 +156,7 @@ exports.tracksIdStatsGET = function (id) {
         } catch (error) {
             reject({
                 code: 500,
-                message: 'Erreur interne du serveur',
+                message: 'Internal server error',
                 error: error.message
             });
         }
@@ -169,7 +169,7 @@ exports.tracksIdMusical_infoGET = function (id) {
             if (!id || typeof id !== 'string' || !id.trim()) {
                 reject({
                     code: 400,
-                    message: 'ID invalide : l\'ID doit être une chaîne de caractères non vide'
+                    message: 'Invalid ID: ID must be a non-empty string'
                 });
                 return;
             }
@@ -178,7 +178,7 @@ exports.tracksIdMusical_infoGET = function (id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Format d\'ID invalide : l\'ID doit être au format "track_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "track_NUMBER"'
                 });
                 return;
             }
@@ -187,7 +187,7 @@ exports.tracksIdMusical_infoGET = function (id) {
             if (!track) {
                 reject({
                     code: 404,
-                    message: `Track avec l'ID ${id} non trouvée`
+                    message: `Track with ID ${id} not found`
                 });
                 return;
             }
@@ -195,7 +195,7 @@ exports.tracksIdMusical_infoGET = function (id) {
             if (!track.musicalInfo) {
                 reject({
                     code: 404,
-                    message: `Informations musicales non trouvées pour la track ${id}`
+                    message: `Musical info not found for track ${id}`
                 });
                 return;
             }
@@ -204,7 +204,7 @@ exports.tracksIdMusical_infoGET = function (id) {
         } catch (error) {
             reject({
                 code: 500,
-                message: 'Erreur interne du serveur',
+                message: 'Internal server error',
                 error: error.message
             });
         }
@@ -214,14 +214,26 @@ exports.tracksIdMusical_infoGET = function (id) {
 exports.tracksPOST = function (body) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!body || typeof body !== 'object') {
+                reject({
+                    code: 400,
+                    message: 'Invalid body: body must be a non-empty object'
+                });
+                return;
+            }
             const newTrack = {
                 id: `track_${data.tracks.length + 1}`,
                 ...body
             };
+
             data.tracks.push(newTrack);
             resolve(newTrack);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -232,7 +244,7 @@ exports.tracksIdPUT = function (body, id) {
             if (!id || typeof id !== 'string' || !id.trim()) {
                 reject({
                     code: 400,
-                    message: 'ID invalide : l\'ID doit être une chaîne de caractères non vide'
+                    message: 'Invalid ID: ID must be a non-empty string'
                 });
                 return;
             }
@@ -241,7 +253,7 @@ exports.tracksIdPUT = function (body, id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Format d\'ID invalide : l\'ID doit être au format "track_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "track_NUMBER"'
                 });
                 return;
             }
@@ -249,7 +261,7 @@ exports.tracksIdPUT = function (body, id) {
             if (!body || typeof body !== 'object') {
                 reject({
                     code: 400,
-                    message: 'Body invalide : le body doit être un objet'
+                    message: 'Invalid body: body must be a non-empty object'
                 });
                 return;
             }
@@ -258,7 +270,7 @@ exports.tracksIdPUT = function (body, id) {
             if (index === -1) {
                 reject({
                     code: 404,
-                    message: `Track avec l'ID ${id} non trouvée`
+                    message: `Track with ID ${id} not found`
                 });
                 return;
             }
@@ -268,7 +280,7 @@ exports.tracksIdPUT = function (body, id) {
         } catch (error) {
             reject({
                 code: 500,
-                message: 'Erreur interne du serveur',
+                message: 'Internal server error',
                 error: error.message
             });
         }
@@ -281,7 +293,7 @@ exports.tracksIdDELETE = function (id) {
             if (!id || typeof id !== 'string' || !id.trim()) {
                 reject({
                     code: 400,
-                    message: 'ID invalide : l\'ID doit être une chaîne de caractères non vide'
+                    message: 'Invalid ID: ID must be a non-empty string'
                 });
                 return;
             }
@@ -290,7 +302,7 @@ exports.tracksIdDELETE = function (id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Format d\'ID invalide : l\'ID doit être au format "track_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "track_NUMBER"'
                 });
                 return;
             }
@@ -299,7 +311,7 @@ exports.tracksIdDELETE = function (id) {
             if (index === -1) {
                 reject({
                     code: 404,
-                    message: `Track avec l'ID ${id} non trouvée`
+                    message: `Track with ID ${id} not found`
                 });
                 return;
             }
@@ -309,7 +321,7 @@ exports.tracksIdDELETE = function (id) {
         } catch (error) {
             reject({
                 code: 500,
-                message: 'Erreur interne du serveur',
+                message: 'Internal server error',
                 error: error.message
             });
         }

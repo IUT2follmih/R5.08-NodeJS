@@ -126,7 +126,27 @@ paths:
         "200":
           description: Track updated successfully
         "400":
-          description: Error updating track
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Track not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Tracks
     delete:
       tags:
@@ -144,6 +164,28 @@ paths:
       responses:
         "204":
           description: Track deleted successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Track not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Tracks
   /albums:
     get:
@@ -177,7 +219,9 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Album'
-                x-content-type: application/json
+        "400":
+          description: Error getting albums
+          x-content-type: application/json
       x-swagger-router-controller: Albums
     post:
       tags:
@@ -193,6 +237,8 @@ paths:
       responses:
         "201":
           description: Album created successfully
+        "400":
+          description: Error creating album
       x-swagger-router-controller: Albums
   /albums/{id}:
     get:
@@ -215,6 +261,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Album'
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Album not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Albums
     put:
       tags:
@@ -238,6 +306,28 @@ paths:
       responses:
         "200":
           description: Album updated successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Album not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Albums
     delete:
       tags:
@@ -255,6 +345,28 @@ paths:
       responses:
         "204":
           description: Album deleted successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Album not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Albums
   /artists:
     get:
