@@ -279,7 +279,11 @@ exports.tracksIdPUT = function (body, id) {
                 ...data.tracks[index],
                 ...body
             };
-            resolve();
+            resolve({
+                code: 200,
+                message: `Track with ID ${id} updated successfully`,
+                track: data.tracks[index]
+            });
         } catch (error) {
             reject({
                 code: 500,

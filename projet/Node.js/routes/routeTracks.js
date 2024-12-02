@@ -53,17 +53,20 @@ router.get('/tracks/style/:style', async (req, res) => {
 
 router.post('/tracks', async (req, res) => {
     try {
-        await TrackService.tracksPOST(req.body);
-        res.status(201).end();
+        const result = await TrackService.tracksPOST(req.body);
+        res.status(201).json({
+            code: 201,
+            message: `Track successfully created with ID: ${result.id}`,
+            track: result
+        });
     } catch (error) {
         res.status(400).json({error: error.message});
     }
 });
-
 router.put('/tracks/:id', async (req, res) => {
     try {
-        await TrackService.tracksIdPUT(req.body, req.params.id);
-        res.end();
+        const result = await TrackService.tracksIdPUT(req.body, req.params.id);
+        res.status(200).json(result);
     } catch (error) {
         res.status(404).json({error: error.message});
     }
@@ -72,7 +75,7 @@ router.put('/tracks/:id', async (req, res) => {
 router.delete('/tracks/:id', async (req, res) => {
     try {
         await TrackService.tracksIdDELETE(req.params.id);
-        res.end();
+        res.status(204).end();
     } catch (error) {
         res.status(404).json({error: error.message});
     }

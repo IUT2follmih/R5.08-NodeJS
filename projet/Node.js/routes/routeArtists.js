@@ -45,8 +45,12 @@ router.get('/artists/:id/albums', async (req, res) => {
 
 router.post('/artists', async (req, res) => {
     try {
-        await ArtistsService.artistsPOST(req.body);
-        res.status(201).end();
+        const result = await ArtistsService.artistsPOST(req.body);
+        res.status(201).json({
+            code: 201,
+            message: `Artist successfully created with ID: ${result.id}`,
+            artist: result
+        });
     } catch (error) {
         res.status(400).json({error: error.message});
     }
@@ -54,8 +58,8 @@ router.post('/artists', async (req, res) => {
 
 router.put('/artists/:id', async (req, res) => {
     try {
-        await ArtistsService.artistsIdPUT(req.body, req.params.id);
-        res.status(204).end();
+        const result = await ArtistsService.artistsIdPUT(req.body, req.params.id);
+        res.status(200).json(result);
     } catch (error) {
         res.status(404).json({error: error.message});
     }

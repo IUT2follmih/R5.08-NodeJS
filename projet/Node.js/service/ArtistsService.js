@@ -210,7 +210,11 @@ exports.artistsIdPUT = function (body, id) {
                 ...data.artists[index],
                 ...body
             };
-            resolve();
+            resolve({
+                code: 200,
+                message: `Artist with ID ${id} successfully updated`,
+                artist: data.artists[index]
+            });
         } catch (error) {
             reject({
                 code: 500,

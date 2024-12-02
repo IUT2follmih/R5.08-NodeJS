@@ -159,7 +159,11 @@ exports.producersIdPUT = function (body, id) {
                 });
             }
             data.producers[index] = {...data.producers[index], ...body};
-            resolve();
+            resolve({
+                code: 200,
+                message: `Producer with ID ${id} successfully updated`,
+                producer: data.producers[index]
+            });
         } catch (error) {
             reject({
                 code: 500,

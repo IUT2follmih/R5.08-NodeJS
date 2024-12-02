@@ -56,9 +56,31 @@ paths:
       responses:
         "201":
           description: Track created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 201
+                  message:
+                    type: string
+                    example: "Track successfully created with ID: track_1"
+                  track:
+                    $ref: '#/components/schemas/Track'
         "400":
           description: Error creating track
-      x-swagger-router-controller: Tracks
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+          x-swagger-router-controller: Tracks
   /tracks/{id}:
     get:
       tags:
@@ -125,6 +147,19 @@ paths:
       responses:
         "200":
           description: Track updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: "Track track_1 successfully updated"
+                  track:
+                    $ref: '#/components/schemas/Track'
         "400":
           description: Invalid ID format
           content:
@@ -237,6 +272,19 @@ paths:
       responses:
         "201":
           description: Album created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 201
+                  message:
+                    type: string
+                    example: "Album successfully created with ID: album_1"
+                  album:
+                    $ref: '#/components/schemas/Album'
         "400":
           description: Error creating album
       x-swagger-router-controller: Albums
@@ -306,6 +354,19 @@ paths:
       responses:
         "200":
           description: Album updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: "Album album_1 successfully updated"
+                  album:
+                    $ref: '#/components/schemas/Album'
         "400":
           description: Invalid ID format
           content:
@@ -416,6 +477,19 @@ paths:
       responses:
         "201":
           description: Artist created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 201
+                  message:
+                    type: string
+                    example: "Artist successfully created with ID: artist_1"
+                  artist:
+                    $ref: '#/components/schemas/Artist'
       x-swagger-router-controller: Artists
   /artists/{id}:
     get:
@@ -483,6 +557,19 @@ paths:
       responses:
         "200":
           description: Artist updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: "Artist artist_1 successfully updated"
+                  artist:
+                    $ref: '#/components/schemas/Artist'
         "400":
           description: Invalid ID format
           content:
@@ -593,6 +680,19 @@ paths:
       responses:
         "201":
           description: Producer created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 201
+                  message:
+                    type: string
+                    example: "Producer successfully created with ID: producer_1"
+                  producer:
+                    $ref: '#/components/schemas/Producer'
       x-swagger-router-controller: Producers
   /producers/{id}:
     get:
@@ -660,6 +760,19 @@ paths:
       responses:
         "200":
           description: Producer updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 200
+                  message:
+                    type: string
+                    example: "Producer producer_1 successfully updated"
+                  producer:
+                    $ref: '#/components/schemas/Producer'
         "400":
           description: Invalid ID format
           content:

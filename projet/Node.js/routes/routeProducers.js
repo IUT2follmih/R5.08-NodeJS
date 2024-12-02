@@ -35,8 +35,12 @@ router.get('/producers/:id/tracks', async (req, res) => {
 
 router.post('/producers', async (req, res) => {
     try {
-        await ProducersService.producersPOST(req.body);
-        res.status(201).end();
+        const result = await ProducersService.producersPOST(req.body);
+        res.status(201).json({
+            code: 201,
+            message: `Producer successfully created with ID: ${result.id}`,
+            producer: result
+        });
     } catch (error) {
         res.status(400).json({error: error.message});
     }
@@ -44,8 +48,8 @@ router.post('/producers', async (req, res) => {
 
 router.put('/producers/:id', async (req, res) => {
     try {
-        await ProducersService.producersIdPUT(req.body, req.params.id);
-        res.status(204).end();
+        const result = await ProducersService.producersIdPUT(req.body, req.params.id);
+        res.status(200).json(result);
     } catch (error) {
         res.status(404).json({error: error.message});
     }

@@ -172,7 +172,11 @@ exports.albumsIdPUT = function (body, id) {
                 ...data.albums[index],
                 ...body
             };
-            resolve();
+            resolve({
+                code: 200,
+                message: `Album with ID ${id} successfully updated`,
+                album: data.albums[index]
+            });
         } catch (error) {
             reject({
                 code: 500,
