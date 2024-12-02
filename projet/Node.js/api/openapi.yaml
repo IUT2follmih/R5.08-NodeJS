@@ -38,9 +38,23 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Track'
-                x-content-type: application/json
         "400":
           description: Error getting tracks
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Tracks
     post:
       tags:
@@ -80,7 +94,22 @@ paths:
                     type: integer
                   message:
                     type: string
-          x-swagger-router-controller: Tracks
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
+        x-swagger-router-controller: Tracks
   /tracks/{id}:
     get:
       tags:
@@ -123,6 +152,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Tracks
     put:
@@ -182,6 +226,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Tracks
     delete:
       tags:
@@ -221,6 +280,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Tracks
   /albums:
     get:
@@ -256,7 +330,21 @@ paths:
                   $ref: '#/components/schemas/Album'
         "400":
           description: Error getting albums
-          x-content-type: application/json
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Albums
     post:
       tags:
@@ -287,6 +375,21 @@ paths:
                     $ref: '#/components/schemas/Album'
         "400":
           description: Error creating album
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Albums
   /albums/{id}:
     get:
@@ -330,6 +433,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Albums
     put:
@@ -389,6 +507,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Albums
     delete:
       tags:
@@ -428,6 +561,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Albums
   /artists:
     get:
@@ -461,7 +609,21 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Artist'
-                x-content-type: application/json
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Artists
     post:
       tags:
@@ -490,6 +652,21 @@ paths:
                     example: "Artist successfully created with ID: artist_1"
                   artist:
                     $ref: '#/components/schemas/Artist'
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Artists
   /artists/{id}:
     get:
@@ -533,6 +710,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Artists
     put:
@@ -592,6 +784,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Artists
     delete:
       tags:
@@ -631,6 +838,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Artists
   /producers:
     get:
@@ -664,7 +886,21 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Producer'
-                x-content-type: application/json
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Producers
     post:
       tags:
@@ -693,6 +929,21 @@ paths:
                     example: "Producer successfully created with ID: producer_1"
                   producer:
                     $ref: '#/components/schemas/Producer'
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Producers
   /producers/{id}:
     get:
@@ -736,6 +987,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Producers
     put:
@@ -795,6 +1061,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Producers
     delete:
       tags:
@@ -833,6 +1114,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Producers
   /tracks/{id}/musical-info:
@@ -878,6 +1174,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Tracks
   /tracks/{id}/stats:
     get:
@@ -922,6 +1233,21 @@ paths:
                     type: integer
                   message:
                     type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Tracks
   /artists/{id}/tracks:
     get:
@@ -962,7 +1288,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Track'
-                x-content-type: application/json
         "400":
           description: Invalid parameters
           content:
@@ -984,6 +1309,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Artists
   /artists/{id}/albums:
@@ -1025,7 +1365,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Album'
-                x-content-type: application/json
         "400":
           description: Invalid parameters
           content:
@@ -1047,6 +1386,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Artists
   /tracks/style/{style}:
@@ -1090,7 +1444,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Track'
-                x-content-type: application/json
         "400":
           description: Invalid parameters
           content:
@@ -1112,6 +1465,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Tracks
   /albums/{id}/tracks:
@@ -1153,7 +1521,21 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Track'
-                x-content-type: application/json
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
+                    type: string
       x-swagger-router-controller: Albums
   /producers/{id}/tracks:
     get:
@@ -1194,7 +1576,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Track'
-                x-content-type: application/json
         "400":
           description: Invalid parameters
           content:
@@ -1216,6 +1597,21 @@ paths:
                   code:
                     type: integer
                   message:
+                    type: string
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    example: 500
+                  message:
+                    type: string
+                    example: "Internal server error"
+                  error:
                     type: string
       x-swagger-router-controller: Producers
 components:
