@@ -33,7 +33,8 @@ npm start
 
 Le serveur est accessible à l'adresse `http://localhost:3000`.
 
-Puis pour d'informations, vous pouvez aller voir la documentation de l'API qui regroupe toutes les méthodes présentent
+Puis pour plus d'informations, vous pouvez aller voir la documentation de l'API qui regroupe toutes les méthodes
+présentes
 sur le serveur : `http://localhost:3000/docs`
 
 ## Jeu de données
@@ -59,7 +60,7 @@ numéros de téléphone, etc.) utiles pour le développement et les tests.
 Pour le lancer depuis la racine du projet :
 
 ```
-pyhton3 Node.js/data/scriptMusic.py
+python3 Node.js/data/scriptMusic.py
 ```
 
 Depuis le dossier `data` :
