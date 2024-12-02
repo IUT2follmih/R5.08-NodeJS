@@ -17,17 +17,37 @@ exports.producersGET = function (limit, offset) {
 exports.producersIdGET = function (id) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^prod_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "prod_NUMBER"'
+                });
+            }
+
             const producer = data.producers.find(producer => producer.id === id);
+
             if (!producer) {
                 reject({
                     code: 404,
-                    message: 'Producer not found'
+                    message: `Producer with ID ${id} not found`
                 });
-            } else {
-                resolve(producer);
             }
+
+            resolve(producer);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -35,20 +55,47 @@ exports.producersIdGET = function (id) {
 exports.producersIdTracksGET = function (id, limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^prod_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "prod_NUMBER"'
+                });
+            }
+
             const producer = data.producers.find(producer => producer.id === id);
+
             if (!producer) {
                 reject({
                     code: 404,
-                    message: 'Producer not found'
+                    message: `Producer with ID ${id} not found`
                 });
-            } else {
-                const producerTracks = data.tracks
-                    .filter(track => track.producerId === id)
-                    .slice(offset, Math.min(offset + limit, data.tracks.length));
-                resolve(producerTracks);
             }
+            const producerTracks = data.tracks
+                .filter(track => track.producerId === id)
+                .slice(offset, Math.min(offset + limit, data.tracks.length));
+
+            if (producerTracks.length === 0) {
+                reject({
+                    code: 404,
+                    message: `No tracks found for producer ${id}`
+                });
+            }
+
+            resolve(producerTracks);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -56,6 +103,13 @@ exports.producersIdTracksGET = function (id, limit, offset) {
 exports.producersPOST = function (body) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!body || typeof body !== 'object') {
+                reject({
+                    code: 400,
+                    message: 'Invalid body'
+                });
+            }
+
             const newProducer = {
                 id: `producer_${data.producers.length + 1}`,
                 ...body
@@ -63,7 +117,11 @@ exports.producersPOST = function (body) {
             data.producers.push(newProducer);
             resolve(newProducer);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            })
         }
     });
 }
@@ -71,18 +129,43 @@ exports.producersPOST = function (body) {
 exports.producersIdPUT = function (body, id) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^prod_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "prod_NUMBER"'
+                });
+            }
+
+            if (!body || typeof body !== 'object') {
+                reject({
+                    code: 400,
+                    message: 'Invalid body: Body must be a non-empty object'
+                });
+            }
+
             const index = data.producers.findIndex(producer => producer.id === id);
             if (index === -1) {
                 reject({
                     code: 404,
-                    message: 'Producer not found'
+                    message: `Producer with ID ${id} not found`
                 });
-            } else {
-                data.producers[index] = {...data.producers[index], ...body};
-                resolve();
             }
+            data.producers[index] = {...data.producers[index], ...body};
+            resolve();
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -90,18 +173,37 @@ exports.producersIdPUT = function (body, id) {
 exports.producersIdDELETE = function (id) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^prod_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "prod_NUMBER"'
+                });
+            }
+
             const index = data.producers.findIndex(producer => producer.id === id);
             if (index === -1) {
                 reject({
                     code: 404,
-                    message: 'Producer not found'
+                    message: `Producer with ID ${id} not found`
                 });
-            } else {
-                data.producers.splice(index, 1);
-                resolve();
             }
+
+            data.producers.splice(index, 1);
+            resolve();
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }

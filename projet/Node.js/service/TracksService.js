@@ -275,7 +275,10 @@ exports.tracksIdPUT = function (body, id) {
                 return;
             }
 
-            data.tracks[index] = {...data.tracks[index], ...body};
+            data.tracks[index] = {
+                ...data.tracks[index],
+                ...body
+            };
             resolve();
         } catch (error) {
             reject({

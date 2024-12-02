@@ -9,26 +9,32 @@ d'accéder à des données concernant des artistes, des albums, des pistes et de
 
 Pour voir la spécification système tout est expliqué dans ici → [SPECIFICATION](SPECIFICATION.md).
 
+## Prérequis
+
+- Node.js (v14 ou supérieur)
+- Python 3.x
+- npm
+- pip
+
 ## Lancer le serveur
 
-Pour lancer le serveur, placez-vous dans le dossier `Node.js` :
+Pour lancer le serveur, placez-vous dans le dossier `Node.js` et installer les dépendances du projet:
 
 ```
 cd Node.js/
+npm install
 ```
 
-En suite, vous pouvez lancer le serveur avec la commande :
+Ensuite, pour lancer le serveur :
 
 ```
 npm start
 ```
 
-Puis pour d'informations, vous pouvez aller voir la documentation de l'API qui regroupe toutes les méthodes présentent
-sur le serveur :
+Le serveur est accessible à l'adresse `http://localhost:3000`.
 
-```
-http://localhost:3000/docs
-```
+Puis pour d'informations, vous pouvez aller voir la documentation de l'API qui regroupe toutes les méthodes présentent
+sur le serveur : `http://localhost:3000/docs`
 
 ## Jeu de données
 
@@ -62,18 +68,26 @@ Depuis le dossier `data` :
 pyhton3 scriptMusic.py
 ```
 
-Le reste du serveur fonctionne toujours quand on change les données.
+Le reste du serveur fonctionne toujours lorsque l'on change les données.
 
 ## Méthodologie
 
-Je me suis d'abord occupé de faire la spécification OpenAPI car je me suis basé sur comment nous devions faire lors du
+Je me suis d'abord occupé de faire la spécification OpenAPI car je me suis basé sur la méthode API First vue lors du
 TP4.
 
-J'ai donc commencé par faire une spécification OpenAPI complète et détaillée, puis j'ai utilisé la fonctionnalité de
-l'éditeur Swagger afin de générer une archive contenant ma base de code.
+J'ai commencé à réaliser la spécification OpenAPI complète et détaillée, puis j'ai utilisé la fonctionnalité de
+l'éditeur Swagger `generate server` afin de générer une archive contenant ma base de code.
 
-Je me suis d'abord occupé de faire la spécification OpenAPI car je ne savais pas comment m'y prendre et en regardant le
-TP4, j'ai vu qu'on pouvait utiliser l'éditeur Swagger pour générer automatiquement un serveur Node.js à
-partir de la spécification.
+Ensuite, j'ai modifié les contrôleurs et les routes pour qu'elles correspondent à mes besoins.
+J'ai par la suite ajouté toutes les méthodes dans les services pour que le serveur puisse fonctionner correctement.
 
-C'est comme ça que j'ai commencé à développer mon API, en partant d'une doc bien détaillée.
+Je me suis rendu compte d'une incohérence dans mes données et j'ai donc décidé de créer un script python pour générer de
+nouvelles données. Ce script permet de générer des données cohérentes et réalistes pour le serveur facilement.
+
+Enfin, j'ai réalisé des tests unitaires pour chaque méthode de chaque service pour m'assurer que le serveur fonctionne
+de
+manière optimale.
+
+## Auteurs
+
+[Hugo Föllmi A12]

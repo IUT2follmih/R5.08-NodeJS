@@ -33,3 +33,27 @@ La documentation détaillée via OpenAPI assure une utilisation claire et effica
 ### 2. Description des entités et relations
 
 ![diagUML1.png](diagUML1.png)
+
+## Fonctionnalités principales
+
+- Gestion des artistes
+- Gestion des albums
+- Gestion des pistes
+- Gestion des producteurs
+- Génération automatique de données
+
+## Structure de l'API
+
+### Points d'accès principaux
+
+- `/artists` : Gestion des artistes
+- `/albums` : Gestion des albums
+- `/tracks` : Gestion des pistes
+- `/producers` : Gestion des producteurs
+
+### Méthodes disponibles
+
+- `GET` : Récupération des données
+- `POST` : Création de nouvelles entrées
+- `PUT` : Mise à jour des données existantes
+- `DELETE` : Suppression des données

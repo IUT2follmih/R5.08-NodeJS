@@ -438,6 +438,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Artist'
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Artist not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Artists
     put:
       tags:
@@ -461,6 +483,28 @@ paths:
       responses:
         "200":
           description: Artist updated successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Artist not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Artists
     delete:
       tags:
@@ -478,6 +522,28 @@ paths:
       responses:
         "204":
           description: Artist deleted successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Artist not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Artists
   /producers:
     get:
@@ -549,6 +615,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Producer'
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Producer not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Producers
     put:
       tags:
@@ -572,6 +660,28 @@ paths:
       responses:
         "200":
           description: Producer updated successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Producer not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Producers
     delete:
       tags:
@@ -589,6 +699,28 @@ paths:
       responses:
         "204":
           description: Producer deleted successfully
+        "400":
+          description: Invalid ID format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: Producer not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Producers
   /tracks/{id}/musical-info:
     get:
@@ -718,6 +850,28 @@ paths:
                 items:
                   $ref: '#/components/schemas/Track'
                 x-content-type: application/json
+        "400":
+          description: Invalid parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: No tracks found for this artist
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Artists
   /artists/{id}/albums:
     get:
@@ -759,6 +913,28 @@ paths:
                 items:
                   $ref: '#/components/schemas/Album'
                 x-content-type: application/json
+        "400":
+          description: Invalid parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: No albums found for this artist
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Artists
   /tracks/style/{style}:
     get:
@@ -906,6 +1082,28 @@ paths:
                 items:
                   $ref: '#/components/schemas/Track'
                 x-content-type: application/json
+        "400":
+          description: Invalid parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+        "404":
+          description: No tracks found for this producer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
       x-swagger-router-controller: Producers
 components:
   schemas:

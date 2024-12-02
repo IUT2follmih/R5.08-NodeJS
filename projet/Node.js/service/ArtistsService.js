@@ -17,17 +17,37 @@ exports.artistsGET = function (limit, offset) {
 exports.artistsIdGET = function (id) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^art_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "art_NUMBER"'
+                });
+            }
+
             const artist = data.artists.find(artist => artist.id === id);
+
             if (!artist) {
                 reject({
                     code: 404,
-                    message: 'Artist not found'
+                    message: `Artist with ID ${id} not found`
                 });
-            } else {
-                resolve(artist);
             }
+
+            resolve(artist);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -35,20 +55,48 @@ exports.artistsIdGET = function (id) {
 exports.artistsIdTracksGET = function (id, limit, offset) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^art_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "art_NUMBER"'
+                });
+            }
+
+            const artist = data.artists.find(artist => artist.id === id);
+
+            if (!artist) {
+                reject({
+                    code: 404,
+                    message: `Artist with ID ${id} not found`
+                });
+            }
+
             const artistTracks = data.tracks
                 .filter(track => track.mainArtistId === id)
                 .slice(offset, Math.min(offset + limit, data.tracks.length));
 
-            if (!artistTracks.length) {
+            if (artistTracks.length === 0) {
                 reject({
                     code: 404,
-                    message: 'No tracks found for this artist'
+                    message: `No tracks found for artist ${id}`
                 });
-            } else {
-                resolve(artistTracks);
+                return;
             }
+            resolve(artistTracks);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -56,20 +104,46 @@ exports.artistsIdTracksGET = function (id, limit, offset) {
 exports.artistsIdAlbumsGET = function (id, limit = 20, offset = 0) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^art_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "art_NUMBER"'
+                });
+            }
+
+            const artist = data.artists.find(artist => artist.id === id);
+
+            if (!artist) {
+                reject({
+                    code: 404,
+                    message: `Artist with ID ${id} not found`
+                });
+            }
             const artistAlbums = data.albums
                 .filter(album => album.artistId === id)
                 .slice(offset, Math.min(offset + limit, data.albums.length));
 
-            if (!artistAlbums.length) {
+            if (artistAlbums.length === 0) {
                 reject({
                     code: 404,
                     message: 'No albums found for this artist'
                 });
-            } else {
-                resolve(artistAlbums);
             }
+            resolve(artistAlbums);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -77,6 +151,13 @@ exports.artistsIdAlbumsGET = function (id, limit = 20, offset = 0) {
 exports.artistsPOST = function (body) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!body || typeof body !== 'object') {
+                reject({
+                    code: 400,
+                    message: 'Invalid body: Body must be a non-empty object'
+                });
+            }
+
             const newArtist = {
                 id: `artist_${data.artists.length + 1}`,
                 ...body
@@ -84,7 +165,11 @@ exports.artistsPOST = function (body) {
             data.artists.push(newArtist);
             resolve(newArtist);
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -92,18 +177,46 @@ exports.artistsPOST = function (body) {
 exports.artistsIdPUT = function (body, id) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^art_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "art_NUMBER"'
+                });
+            }
+
+            if (!body || typeof body !== 'object') {
+                reject({
+                    code: 400,
+                    message: 'Invalid body: Body must be a non-empty object'
+                });
+            }
             const index = data.artists.findIndex(artist => artist.id === id);
             if (index === -1) {
                 reject({
                     code: 404,
-                    message: 'Artist not found'
+                    message: `Artist with ID ${id} not found`
                 });
-            } else {
-                data.artists[index] = {...data.artists[index], ...body};
-                resolve();
             }
+
+            data.artists[index] = {
+                ...data.artists[index],
+                ...body
+            };
+            resolve();
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
@@ -111,18 +224,37 @@ exports.artistsIdPUT = function (body, id) {
 exports.artistsIdDELETE = function (id) {
     return new Promise(function (resolve, reject) {
         try {
+            if (!id || typeof id !== 'string' || !id.trim()) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID: ID must be a non-empty string'
+                });
+            }
+
+            const idPattern = /^art_\d+$/;
+            if (!idPattern.test(id)) {
+                reject({
+                    code: 400,
+                    message: 'Invalid ID format: ID must be in the format "art_NUMBER"'
+                });
+            }
+
             const index = data.artists.findIndex(artist => artist.id === id);
             if (index === -1) {
                 reject({
                     code: 404,
-                    message: 'Artist not found'
+                    message: `Artist with ID ${id} not found`
                 });
-            } else {
-                data.artists.splice(index, 1);
-                resolve();
             }
+
+            data.artists.splice(index, 1);
+            resolve();
         } catch (error) {
-            reject(error);
+            reject({
+                code: 500,
+                message: 'Internal server error',
+                error: error.message
+            });
         }
     });
 }
