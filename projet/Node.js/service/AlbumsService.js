@@ -29,7 +29,7 @@ exports.albumsIdGET = function (id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Invalid ID format: ID must be in the format "album_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "alb_NUMBER"'
                 });
                 return;
             }
@@ -69,7 +69,7 @@ exports.albumsIdTracksGET = function (id, limit, offset) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Invalid ID format: ID must be in the format "album_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "alb_NUMBER"'
                 });
                 return;
             }
@@ -147,7 +147,7 @@ exports.albumsIdPUT = function (body, id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Invalid ID format: ID must be in the format "album_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "alb_NUMBER"'
                 });
                 return;
             }
@@ -198,7 +198,7 @@ exports.albumsIdDELETE = function (id) {
             if (!idPattern.test(id)) {
                 reject({
                     code: 400,
-                    message: 'Invalid ID format: ID must be in the format "album_NUMBER"'
+                    message: 'Invalid ID format: ID must be in the format "alb_NUMBER"'
                 });
                 return;
             }
